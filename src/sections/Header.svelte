@@ -25,18 +25,16 @@
 
     {#if init} 
 
-        {#each iconsList as {svg, top, left, size}}
-            <div class="svg" style="top:{top}; left:{left}"> <Icon class="icon" data={svg} size={size} /> </div>
+        {#each  iconsList as {svg, top, left, size, delay, duration, translateX, translateY}}
+            <div transition:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon class="icon" data={svg} size={size} /> </div>
         {/each}
-    
-        <!-- h1: transition:fadeScale={{delay: 5000, duration: 2500, baseScale: 1.2}} -->
-        <!-- h2: transition:fadeScale={{delay: 4500, duration: 2000, baseScale: 1.1}} -->
-        <!-- p:  transition:fadeScale={{delay, duration}}-->
-        <h1  class="header__title">Web Developer</h1>
-        <h2  class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
+        
+        <span transition:animations.fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
+        <h1 transition:fadeScale={{delay: 4500, duration: 2000, baseScale: 0.8, translateX: -2, translateY: -3}}  class="header__title">Web Developer</h1>
+        <h2 transition:fadeScale={{delay: 4500, duration: 2500, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
 
         {#each words as { name, top, left, delay, duration }}
-            <p  style="top: {top}; left: {left}">{@html name}</p>
+            <p transition:fadeScale={{delay, duration}} style="top: {top}; left: {left}">{@html name}</p>
         {/each}
 
     {/if}
@@ -75,5 +73,9 @@
         & > span {
             @extend .name--gradient;
         }
+    }
+    .welcome{
+        position: absolute;
+        opacity: 0;
     }
 </style>

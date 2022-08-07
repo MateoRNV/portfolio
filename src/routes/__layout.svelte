@@ -8,11 +8,14 @@
 
 <Header />
 
-<button class="theme-btn light" on:click={setTheme('green')} title="Light mode">
+<button class="theme-btn light" on:click={setTheme('green')} title="Green mode">
   Green
 </button>
-<button class="theme-btn dark" on:click={setTheme('blue')} title="Dark mode">
+<button class="theme-btn dark" on:click={setTheme('blue')} title="Blue mode">
   blue
+</button>
+<button class="theme-btn dark" on:click={setTheme('dark')} title="Dark mode">
+  dark
 </button>
 
 <main>

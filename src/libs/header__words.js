@@ -1,4 +1,4 @@
-const words = [{name: "const sports = 0;",delay: 1000,  duration: 3000, top: "17%", left: "9%"},
+const words = [{name: "const sports = 0;",delay: 1500, duration: 3000, top: "17%", left: "9%"},
                {name: "ReactJS",delay: 3000,  duration: 2000, top: "5%", left: "33%"},
                {name: 'print("Hello World")',delay: 3000,  duration: 2000, top: "15%", left: "58%"},
                {name: "display: flex;",delay: 1000,  duration: 3000, top: "2%", left: "85%"},

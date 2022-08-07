@@ -16,15 +16,21 @@ $varela: 'Varela Round', sans-serif;
 :root.green {
   --bg-color: #11160F;
   --text-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, #ADFF00 61.46%, rgba(255, 255, 255, 0.92) 99.99%, rgba(226, 236, 206, 0.4) 100%);
-
+  --opacity: 0.75;
 }
 
 :root.blue {
   --bg-color: #141520;
   --text-gradient: linear-gradient(180deg, #030944 0%, #8692FF 59.37%, #030944 100%);
+  --opacity: 0.75;
+}
+:root.dark {
+  --bg-color: #000000;
+  --text-gradient: white;
+  --opacity: 1;
 }
 
-//green
+//text color
 $bg-color: #11160F;
 $bg-text-color: rgba(255, 255, 255, 0.3);
 $title: white;
@@ -35,7 +41,7 @@ $name: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    opacity: 0.75;
+    opacity: var(--opacity);
 }
 
 //black
