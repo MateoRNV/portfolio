@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,500&family=Josefin+Sans:wght@500&family=Noto+Sans+KR:wght@500&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Cabin:wght@400;500&family=DM+Sans&family=Josefin+Sans:wght@500&family=Mukta:wght@300;400;700&family=Noto+Sans+KR:wght@300;500&family=Varela+Round&display=swap');
 
 
 /* Variables and mixins declared here will be available in all other SCSS files */
@@ -8,13 +8,18 @@ $josefin: 'Josefin Sans', sans-serif;
 $noto: 'Noto Sans KR', sans-serif;
 $cabin: 'Cabin', sans-serif;
 $varela: 'Varela Round', sans-serif;
+$aclonica: 'Aclonica', sans-serif;
+$mukta: 'Mukta', sans-serif;
+$dm: 'DM Sans', sans-serif;
 
-//colors
+//text color
+$bg-text-color: rgba(255, 255, 255, 0.3);
 
-
+//theme colors
 :root,
 :root.green {
   --bg-color: #11160F;
+  --text-color: #DEF8D6;
   --text-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, #ADFF00 61.46%, rgba(255, 255, 255, 0.92) 99.99%, rgba(226, 236, 206, 0.4) 100%);
   --opacity: 0.75;
 }
@@ -30,24 +35,10 @@ $varela: 'Varela Round', sans-serif;
   --opacity: 1;
 }
 
-//text color
-$bg-color: #11160F;
-$bg-text-color: rgba(255, 255, 255, 0.3);
-$title: white;
-$name: white;
-
 .name--gradient {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: var(--opacity);
-}
-
-//black
-.black{
-    $bg-color: #000000;
-    $bg-text-color: rgba(255, 0, 0, 0.171);
-    $title: white;
-    $name: white;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: var(--opacity);
 }

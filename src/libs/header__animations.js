@@ -6,8 +6,6 @@ const fadeScale = function(node,{delay = 1000, duration = 1000, baseScale = 1,tr
     const opacity = +getComputedStyle(node).opacity;
     const s = 1 //check if node is a number and has and initial scale
     const is = 1 - baseScale 
-
-    console.log(delay, duration);
     return{
         delay,
         duration,
@@ -19,7 +17,9 @@ const fadeScale = function(node,{delay = 1000, duration = 1000, baseScale = 1,tr
     }
 }
 
-const fadeScaleInOut = function(node, {delay = 10000, duration= 10000, }){
+const fadeScaleInOut = function(node, {delay = 10000, duration= 10000, opacity= 0.6, baseScale = 3}){
+
+    const is = 1 - baseScale
 
     return{
         delay,
@@ -27,7 +27,7 @@ const fadeScaleInOut = function(node, {delay = 10000, duration= 10000, }){
         css: (t,u) => {
             const easedT = quintOut(t);
             const easedU = quintOut(u);
-            return `opacity: ${easedU * 0.6}; transform: scale(${(easedT * -2)+3})`;
+            return `opacity: ${easedU * 0.6}; transform: scale(${(easedT * is)+baseScale})`;
         }
     }
 }

@@ -1,20 +1,26 @@
-<nav class="flex">
+
+
+<nav class="flex navBar">
     <h2>Mateo Narváez</h2>
     <ul class="flex nav__menu">
         <li><a href="/#/">Home</a></li>
         <li><a href="/#/about">About</a></li>
         <li><a href="/#/contact">Contact</a></li>
-        <li></li>
+        <li />
     </ul>
 </nav>
 
 <style lang="scss">
     // $text-color: #E7F6F2;
-    $text-color: #E7F6F2;
+    $text-color: #e7f6f2;
 
-    nav{
+    .navBar {
+        top: 0;
         width: 100%;
         position: fixed;
+        background-color: #0e140c;
+        border-bottom: 1px solid white;
+        transition: top 0.3s;
     }
 
     h2 {
@@ -26,9 +32,7 @@
     nav {
         padding: 0 3rem 0 2rem;
         justify-content: space-between;
-        color:$text-color;
-        // background-color: #2C3333;
-        // background-color: #2C3333;
+        color: $text-color;
     }
     .nav__menu {
         gap: 3rem;

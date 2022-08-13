@@ -1,5 +1,4 @@
 <script>
-    import { fade } from "svelte/transition";
     import { onMount } from "svelte";
 
     //animations and words for the header
@@ -8,15 +7,22 @@
 
     //import icons
     import Icon from "svelte-icon/Icon.svelte";
-    import iconsList from "../libs/icons__svg";
+    import icons from "../libs/icons__svg";
 
+    //animations funcitons
     const fadeScale = animations.fadeScale;
+    const fadeScaleInOut = animations.fadeScaleInOut;
 
+    let iconList = [];
     let init = false;
+
     onMount(() => {
         init = true;
+        
+        //firefox sizes
+        let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        iconList = icons.iconsBackground(isFirefox)
     });
-
                     
 </script>
 
@@ -25,13 +31,13 @@
 
     {#if init} 
 
-        {#each  iconsList as {svg, top, left, size, delay, duration, translateX, translateY}}
-            <div transition:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon class="icon" data={svg} size={size} /> </div>
+        {#each  iconList as {svg, top, left, size, delay, duration, translateX, translateY}}
+            <div transition:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon data={svg} size={size} /> </div>
         {/each}
         
-        <span transition:animations.fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
+        <span transition:fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
         <h1 transition:fadeScale={{delay: 4500, duration: 2000, baseScale: 0.8, translateX: -2, translateY: -3}}  class="header__title">Web Developer</h1>
-        <h2 transition:fadeScale={{delay: 4500, duration: 2500, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
+        <h2 transition:fadeScale={{delay: 4500, duration: 2200, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
 
         {#each words as { name, top, left, delay, duration }}
             <p transition:fadeScale={{delay, duration}} style="top: {top}; left: {left}">{@html name}</p>
@@ -58,17 +64,15 @@
         align-items: center;
     }
     .header__title {
+        margin-bottom: 2rem;
         font-family: $varela;
         font-size: 60px;
-        color: $title;
-        margin-bottom: 2rem;
     }
     .header__name {
         margin-top: 0;
         font-family: $varela;
         font-size: 35px;
         font-weight: 500;
-        color: $name;
 
         & > span {
             @extend .name--gradient;
