@@ -22,17 +22,20 @@ $bg-text-color: rgba(255, 255, 255, 0.3);
   --text-color: #DEF8D6;
   --text-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, #ADFF00 61.46%, rgba(255, 255, 255, 0.92) 99.99%, rgba(226, 236, 206, 0.4) 100%);
   --opacity: 0.75;
+  --navbar__background-color: #0e140c;
 }
 
 :root.blue {
   --bg-color: #141520;
   --text-gradient: linear-gradient(180deg, #030944 0%, #8692FF 59.37%, #030944 100%);
   --opacity: 0.75;
+  --navbar__background-color: #0c0c14;
 }
 :root.dark {
   --bg-color: #000000;
   --text-gradient: white;
   --opacity: 1;
+  --navbar__background-color: #000;
 }
 
 .name--gradient {

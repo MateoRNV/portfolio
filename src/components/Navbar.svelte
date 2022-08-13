@@ -1,6 +1,10 @@
+<script>
+    let y;
+</script>
 
+<svelte:window bind:scrollY={y} />
 
-<nav class="flex navBar">
+<nav class="flex navBar" class:slideDown={y >= 50}>
     <h2>Mateo Narváez</h2>
     <ul class="flex nav__menu">
         <li><a href="/#/">Home</a></li>
@@ -11,16 +15,15 @@
 </nav>
 
 <style lang="scss">
-    // $text-color: #E7F6F2;
-    $text-color: #e7f6f2;
 
     .navBar {
-        top: 0;
+        top: -5rem;
         width: 100%;
         position: fixed;
-        background-color: #0e140c;
+        background-color: var(--navbar__background-color);
         border-bottom: 1px solid white;
-        transition: top 0.3s;
+        transition: top 1s;
+        transition: background-color 3s;
     }
 
     h2 {
@@ -28,11 +31,11 @@
         font-family: $cabin;
         font-weight: 500;
         letter-spacing: 2.5px;
+        color: white;
     }
     nav {
         padding: 0 3rem 0 2rem;
         justify-content: space-between;
-        color: $text-color;
     }
     .nav__menu {
         gap: 3rem;
@@ -43,7 +46,10 @@
 
         a {
             font-family: $noto;
-            color: $text-color;
+            color: white;
         }
+    }
+    .slideDown{
+        top: 0;
     }
 </style>

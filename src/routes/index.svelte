@@ -3,7 +3,6 @@
     import iconsSvg from "../libs/icons__svg";
     
     const icons = iconsSvg.svgColorList;
-    console.log(icons)
 
 </script>  
 
@@ -58,9 +57,9 @@
 <section>
     <div class="index__section">
         <h3>Contacts</h3>
+        
     </div>
 </section>
-
 
 <style lang="scss">
     hr{
