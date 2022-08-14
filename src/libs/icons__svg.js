@@ -18,6 +18,11 @@ import html from "../images/html.svg?raw";
 import css from "../images/css.svg?raw";
 import javascript from "../images/javascript.svg?raw";
 
+// Contacts Icons
+import github from "../images/github.svg?raw";
+import gmail from "../images/gmail.svg?raw";
+import linkedin from "../images/linkedin.svg?raw";
+
 
 const svgWhiteList=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "80%", translateX:3, translateY:10, duration:2000, delay:1500},
     {svg: figmaWhite, top: "17%", left:"30%", size: "40%", translateX:3, translateY:10, duration:2000, delay:1500},

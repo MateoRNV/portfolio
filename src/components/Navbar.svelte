@@ -7,9 +7,9 @@
 <nav class="flex navBar" class:slideDown={y >= 50}>
     <h2>Mateo Narváez</h2>
     <ul class="flex nav__menu">
-        <li><a href="/#/">Home</a></li>
-        <li><a href="/#/about">About</a></li>
-        <li><a href="/#/contact">Contact</a></li>
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/experience">Experience</a></li>
         <li />
     </ul>
 </nav>
@@ -22,8 +22,7 @@
         position: fixed;
         background-color: var(--navbar__background-color);
         border-bottom: 1px solid white;
-        transition: top 1s;
-        transition: background-color 3s;
+        transition: top 1s, background-color 3s;
     }
 
     h2 {
@@ -39,7 +38,7 @@
     }
     .nav__menu {
         gap: 3rem;
-
+        margin-right: 1rem;
         li {
             margin: auto;
         }

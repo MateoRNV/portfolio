@@ -1,10 +1,39 @@
 <script>
+    import Header from "../sections/Header.svelte";
+    import { onMount } from "svelte";
+
     import Icon from "svelte-icon/Icon.svelte";
     import iconsSvg from "../libs/icons__svg";
+
+    
+    import githubIcon from "../images/github.svg?raw";
+    import gmail from "../images/gmail.svg?raw";
+    import linkedin from "../images/linkedin.svg?raw";
+
     
     const icons = iconsSvg.svgColorList;
 
+    const options = { timeZone: 'Europe/Lisbon', hour: '2-digit', minute:'2-digit', second:'2-digit', hour12: false };
+    let time = new Date();
+    
+    $: myTime = "";
+
+    onMount(() => {
+		const interval = setInterval(() => {
+			time = new Date();
+            myTime = time.toLocaleString('en-US', options)
+		}, 0.1000);
+
+		return () => {
+			clearInterval(interval);
+		};
+    });
+
 </script>  
+
+<Header />
+
+<hr class="header__hr"/>
 
 <section class="flex">
     <article class="index__section">
@@ -54,14 +83,29 @@
 
 <hr />
 
-<section>
-    <div class="index__section">
+<section class="flex">
+    <section class="index__section section__contact">
         <h3>Contacts</h3>
-        
-    </div>
+        <br>
+        <p>Feel free to call, text or email. I speak English, Spanish and Portuguese</p>
+        <p>I usually avaiable between 9h to 21h (UTC + 1)</p>  
+        <ul class="section__contact__list">
+            <li><Icon data={githubIcon} /> <span> mnarvaez2299@gmail.com </span></li>
+            <li><Icon data={gmail} /><a href="https://www.linkedin.com/in/mateo-narv%C3%A1ez/">https://www.linkedin.com/in/mateo-narv%C3%A1ez/</a></li>
+            <li><Icon data={linkedin} /><a href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
+        </ul>
+    </section>
+    <section class="index__section section__mytime flex">
+        <h3 class="section__time">My Hours</h3>
+        <br>
+        <span>{myTime}</span>
+    </section>
 </section>
 
 <style lang="scss">
+    .header__hr{
+        width: 100%;
+    }
     hr{
         width: 92%;
     }
@@ -94,11 +138,41 @@
             line-height: 2rem;
         }
     }
+    .section__contact{
+        width: 70%;
+        p{
+            margin-bottom: 0;
+        }
+        li{
+            list-style: none;
+            margin: 1rem 0;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .section__contact__list{
+            margin-top: 2rem;
+            li{
+                gap: 1rem;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .section__time{
+        text-align: center;
+    }
     .icons{
         margin: 0.5rem 0;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
         gap: 3rem 5.5rem;
+    }
+    .section__mytime{
+        flex-direction: column;
+        align-items: center;
+        font-size: 40px;
     }
 </style>

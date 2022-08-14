@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+	import { fade } from 'svelte/transition';
 
     //animations and words for the header
     import animations from "../libs/header__animations";
@@ -27,20 +28,18 @@
 </script>
 
 <header class="header flex">
-
-
     {#if init} 
 
         {#each  iconList as {svg, top, left, size, delay, duration, translateX, translateY}}
-            <div transition:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon data={svg} size={size} /> </div>
+            <div out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon data={svg} size={size} /> </div>
         {/each}
         
-        <span transition:fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
-        <h1 transition:fadeScale={{delay: 4500, duration: 2000, baseScale: 0.8, translateX: -2, translateY: -3}}  class="header__title">Web Developer</h1>
-        <h2 transition:fadeScale={{delay: 4500, duration: 2200, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
+        <span out:fade={{duration:1, delay:0.1000}} in:fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
+        <h1 out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay: 4500, duration: 2000, baseScale: 0.8, translateX: -2, translateY: -3}}  class="header__title">Web Developer</h1>
+        <h2 out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay: 4500, duration: 2200, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
 
         {#each words as { name, top, left, delay, duration }}
-            <p transition:fadeScale={{delay, duration}} style="top: {top}; left: {left}">{@html name}</p>
+            <p  out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration}} style="top: {top}; left: {left}">{@html name}</p>
         {/each}
 
     {/if}
