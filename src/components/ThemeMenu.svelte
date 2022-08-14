@@ -2,22 +2,17 @@
     import Icon from "svelte-icon/Icon.svelte";
     import arrow from "../images/arrow.svg?raw";
     
-    $: setTheme = theme => { document.documentElement.className = theme; console.log("theme", theme) };
-        
-     let arrowColor = "#0e140c";
+    $: setTheme = (theme, color) => { document.documentElement.className = theme; arrowColor = color };
+    $: arrowColor = "#34432E";
 
     const themes = [{name: "green", color: "#34432E"},{name: "blue", color: "#282A3F"},{name: "dark", color: "#000"}]
     
-    function displayMenu(){
-        const themesMenu = document.getElementsByClassName("themes__box");
-        themesMenu.style.display = "flex";
-    }
 </script>
 
     <div class="themes__box flex">
 
         {#each themes as {name, color}}
-            <button on:click={setTheme(name)} title="Green mode" style="color: {color};">
+            <button on:click={setTheme(name, color)} title="Green mode" style="color: {color};">
                 <div class="circle-color" style="background-color:{color};"/>
                 {name}
             </button>
