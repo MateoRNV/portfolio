@@ -90,9 +90,9 @@
         <p>Feel free to call, text or email. I speak English, Spanish and Portuguese</p>
         <p>I usually avaiable between 9h to 21h (UTC + 1)</p>  
         <ul class="section__contact__list">
-            <li><Icon data={githubIcon} /> <span> mnarvaez2299@gmail.com </span></li>
-            <li><Icon data={gmail} /><a href="https://www.linkedin.com/in/mateo-narv%C3%A1ez/">https://www.linkedin.com/in/mateo-narv%C3%A1ez/</a></li>
-            <li><Icon data={linkedin} /><a href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
+            <li><Icon data={gmail} /> <span> mnarvaez2299@gmail.com </span></li>
+            <li><Icon data={linkedin} /><a href="https://www.linkedin.com/in/mateo-narv%C3%A1ez/">https://www.linkedin.com/in/mateo-narv%C3%A1ez/</a></li>
+            <li><Icon data={githubIcon} /><a href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
         </ul>
     </section>
     <section class="index__section section__mytime flex">

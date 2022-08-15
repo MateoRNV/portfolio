@@ -4,13 +4,14 @@
   import "../app.scss";
 </script>
 
-<Navbar />
-<ThemeMenu />
 
 <!-- Main  -->
 <main class="main flex">
   <slot />
 </main>
+
+<Navbar />
+<ThemeMenu />
 
 <style>
   .main {
