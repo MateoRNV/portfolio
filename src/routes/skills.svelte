@@ -32,9 +32,8 @@
 
 {#if init}
 
-    <a in:fade={{duration:2000, delay:1000}} out:fade class="back__buttom" href="/" class:dissapear={y >= 50}> &#8592 back</a>
-    <h2 in:animations.typewriter={{speed:1}} out:fade>Skills</h2>
-
+    <h1 in:animations.typewriter={{speed:1}} out:fade>Skills</h1>
+    <div class="back__buttom"><a in:fade={{duration:2000, delay:1000}} out:fade  href="/" class:disappear={y >= 50}> &#8592 Home</a></div>
 
     <div in:fade={{duration:2000, delay:1000}} out:fade class="skills flex">
         {#each skills as { name, svg, icon, color, experience }}
@@ -64,7 +63,7 @@
                 <div class="card__icon"><Icon data={icon} /></div>
                 <div class="card__info">
                     <div class="card__info__title flex">
-                        <h4>{name}</h4>
+                        <h3>{name}</h3>
                         <span>{experience}</span>
                     </div>
                 </div>
@@ -72,30 +71,38 @@
         {/each}
     </div>
 
+    <div style="height: 100vh;" class="more flex" in:fade={{duration:2000, delay:1000}} out:fade>
+        <h2>More Skills</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla expedita, corrupti quibusdam error ullam eos molestiae molestias et repudiandae suscipit culpa iusto sunt voluptates a voluptatem, aperiam quaerat hic inventore!</p>
+        <ul>
+            <li><span>Git:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis in excepturi nesciunt </li>
+            <li><span>Scrum .-</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam possimus cumque delectus consectetur a velit tenetur?</li>
+            <li><span>Bootstrap </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quidem. Doloribus error magnam porro laudantium est repudiandae libero ipsum omnis, vel velit animi autem alias exercitationem molestias rerum delectus ut.</li>
+            <li><span>Figma: </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora repellendus atque facere laboriosam numquam debitis expedita voluptatibus fugiat ut. Saepe veritatis blanditiis tempore non perferendis voluptate nostrum libero expedita.</li>
+        </ul>
+    </div>
+
 {/if}
 
-<h3>More Skills</h3>
-<div style="height: 70vh;"></div>
-
-
 <style lang="scss">
-    h2 {
-        margin: 3rem 0;
+    // title
+    h1 {
+        margin: 3rem 0 2rem 0;
         font-family: $aclonica;
         font-weight: lighter;
         font-size: 30px;
         text-align: center;
     }
     .back__buttom{
-        position: absolute;
-        top: 9%;
-        left: 7%;
+        margin: 0 auto 2rem auto;
+        width: 80%;
         transition: top 1s ease-out;
     }
-    .dissapear{
+    .disappear{
+        position: absolute;
         top: -5rem
     }
-
+    // skills section
     .skills {
         gap: 1rem;
         justify-content: space-between;
@@ -103,7 +110,6 @@
         width: 65%;
         height: 65vh;
     }
-
     .skill {
         display: flex;
         justify-content: center;
@@ -126,7 +132,7 @@
 
         transition: all 0.7s ease-out;
 
-        h4 {
+        h3 {
             display: inline-block;
             margin: 0;
         }
@@ -144,7 +150,7 @@
             display: flex;
             flex-direction: column;
 
-            h4 {
+            h3 {
                 font-size: 18px;
                 text-transform: capitalize;
             }
@@ -155,6 +161,7 @@
 
         // border: 1px solid white;
     }
+    //cards style and scrollbar
     .card__main {
         display: none;
         transition: all 0.7s ease-out;
@@ -182,7 +189,6 @@
         padding: 0 1rem;
         top: 7%;
     }
-
     .card__icon {
         position: absolute;
         bottom: 5%;
@@ -206,5 +212,28 @@
         left: 0px;
         border-radius: 40px;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    // more skills section
+    .more{
+        flex-direction: column;
+        margin: auto;
+        width: 80%;
+        font-weight: lighter;
+        h2{
+            margin: 3rem 0 1rem 0;
+            font-family: $varela;
+            font-size: 25px;
+            text-align: start;
+        }
+        li{
+            margin: 1rem 0;
+            & > span{
+                margin-right: 1rem;
+                // text-decoration: underline;
+                font-weight: 500;
+            }
+        }
+
     }
 </style>

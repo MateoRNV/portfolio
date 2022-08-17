@@ -51,6 +51,7 @@
                 <Icon data={svg} size={size} color="transparent"/>
             {/each}
         </div>
+        <div class="section__button"><a href="/skills">More details</a></div>
     </article>
 </section>
 
@@ -67,6 +68,7 @@
             <li>Api connections, creation of endpoints</li>
             <li>Complete projects with front-end and back-end</li>
         </ul>
+        <div class="section__button button__alt"><a href="/projects">Demos - Projects</a></div>
     </section>
     <section class="index__section">
         <h3>Experience</h3>
@@ -78,6 +80,7 @@
             <li>Webtales (Internship): Mar 2021 | Jun 2021</li>
             <li>University - Computer Science: 2017 </li>
         </ul>
+        <div class="section__button"><a href="/experience">More Info</a></div>
     </section>
 </section>
 
@@ -91,8 +94,8 @@
         <p>I usually avaiable between 9h to 21h (UTC + 1)</p>  
         <ul class="section__contact__list">
             <li><Icon data={gmail} /> <span> mnarvaez2299@gmail.com </span></li>
-            <li><Icon data={linkedin} /><a href="https://www.linkedin.com/in/mateo-narv%C3%A1ez/">https://www.linkedin.com/in/mateo-narv%C3%A1ez/</a></li>
-            <li><Icon data={githubIcon} /><a href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
+            <li><Icon data={linkedin} /><a class="button--none--style" href="https://www.linkedin.com/in/mateo-narv%C3%A1ez/">https://www.linkedin.com/in/mateo-narv%C3%A1ez/</a></li>
+            <li><Icon data={githubIcon} /><a class="button--none--style" href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
         </ul>
     </section>
     <section class="index__section section__mytime flex">
@@ -110,7 +113,7 @@
         width: 92%;
     }
     .index__section {
-        margin: 4rem 2rem;
+        margin: 2rem 2rem;
         width: 50%;
         padding: 0 5rem;
 
@@ -137,6 +140,36 @@
             list-style: outside;
             line-height: 2rem;
         }
+
+        a{
+            padding: 0.5rem 1rem;
+            color: var(--bg-color);
+            background-color: white;
+            border-radius: 30px;
+
+            transition: all 0.5s ease-out;
+        }
+        a:hover{
+            background-color: var(--bg-color);
+            border: 1px solid white;
+            color: white;
+        }
+        .section__button{
+            margin-top: 3rem;
+            float: right;
+        }
+        .button__alt{
+            a{
+                color: white;
+                background-color: var(--bg-color);
+                border: 1px solid white;
+            }
+            a:hover{
+                background-color: white;
+                border: none;
+                color: var(--bg-color);
+            }
+        }
     }
     .section__contact{
         width: 70%;
@@ -158,6 +191,12 @@
                 display: flex;
                 align-items: center;
             }
+        }
+        .button--none--style{
+            background-color: transparent;
+        }
+        .button--none--style:hover{
+            border: none;
         }
     }
     .section__time{

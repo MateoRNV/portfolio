@@ -58,7 +58,7 @@ const svgColorList =[   {svg: vue, size: "12%"},
             ]
             
 const svgSkillsCard = [
-    {name: "vue", svg: vueSimple, icon: vue, isActive: true, color: "rgba(0, 138, 120, 0.1)", experience: "2 years"},
+    {name: "vue", svg: vueSimple, icon: vue, isActive: true, color: "rgba(0, 138, 120, 0.1)", experience: "1.5 years"},
     {name: "svelte", svg: svelteSimple, icon: svelte, isActive: true, color: "rgba(88, 57, 31, 0.35)", experience: "4 months"},
     {name: "react", svg: reactSimple, icon: react, isActive: true, color: "rgba(3, 33, 34, 0.35)", experience: "Learning"},
     {name: "node", svg: nodeSimple, icon: node, isActive: true, color: "rgba(2, 49, 16, 0.35)", experience: "1 year"},
