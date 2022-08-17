@@ -1,6 +1,5 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 
-
 body {
   margin: auto;
   max-width: 1400px;
@@ -9,9 +8,6 @@ body {
 
   color: white;
   transition: background-color 2.5s ease;
-    p{
-      color: var(--text-color);
-    }
 }
 
 ul {
@@ -20,8 +16,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .flex {
   display: flex;
+}
+
+// function
+@function colorOpacity($color, $opacity){
+  @return rgba($color, $opacity);
 }

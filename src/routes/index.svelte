@@ -96,7 +96,7 @@
         </ul>
     </section>
     <section class="index__section section__mytime flex">
-        <h3 class="section__time">My Hours</h3>
+        <h3 class="section__time">UTC + 1</h3>
         <br>
         <span>{myTime}</span>
     </section>

@@ -32,14 +32,18 @@ const fadeScaleInOut = function(node, {delay = 10000, duration= 10000, opacity= 
     }
 }
 
-const test = function(node,{}){
-    let duration = 3000;
-    return{
+const typewriter = function(node,{ speed = 2}){
+
+    const text = node.textContent;
+    const duration = text.length / (speed * 0.01);
+
+    return {
         duration,
-        css: (t,u) => {
-            return `opacity: ${t};transform: scale(${(u * 1)+1})`;
+        tick: t => {
+            const i = Math.trunc(text.length * t);
+            node.textContent = text.slice(0, i);
         }
-    }
+    };
 };
 
-export default { test, fadeScale, fadeScaleInOut};
+export default { typewriter, fadeScale, fadeScaleInOut};

@@ -5,7 +5,7 @@
 <svelte:window bind:scrollY={y} />
 
 <nav class="flex navBar" class:slideDown={y >= 50}>
-    <h2>Mateo Narváez</h2>
+    <h2><a href="/">Mateo Narváez</a></h2>
     <ul class="flex nav__menu">
         <li><a href="/skills">Skills</a></li>
         <li><a href="/projects">Projects</a></li>
@@ -17,6 +17,7 @@
 <style lang="scss">
 
     .navBar {
+        max-width: 1440px;
         top: -5rem;
         width: 100%;
         position: fixed;

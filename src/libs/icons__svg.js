@@ -18,10 +18,12 @@ import html from "../images/html.svg?raw";
 import css from "../images/css.svg?raw";
 import javascript from "../images/javascript.svg?raw";
 
-// Contacts Icons
-import github from "../images/github.svg?raw";
-import gmail from "../images/gmail.svg?raw";
-import linkedin from "../images/linkedin.svg?raw";
+// Icons without raw
+import vueSimple from "../images/vue.svg";
+import svelteSimple from "../images/svelte.svg";
+import reactSimple from "../images/react.svg";
+import nodeSimple from "../images/node.svg";
+import laravelSimple from "../images/laravel.svg"; 
 
 
 const svgWhiteList=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "80%", translateX:3, translateY:10, duration:2000, delay:1500},
@@ -55,6 +57,15 @@ const svgColorList =[   {svg: vue, size: "12%"},
                         {svg: javascript, size: "12%"},
             ]
             
+const svgSkillsCard = [
+    {name: "vue", svg: vueSimple, icon: vue, isActive: true, color: "rgba(0, 138, 120, 0.1)", experience: "2 years"},
+    {name: "svelte", svg: svelteSimple, icon: svelte, isActive: true, color: "rgba(88, 57, 31, 0.35)", experience: "4 months"},
+    {name: "react", svg: reactSimple, icon: react, isActive: true, color: "rgba(3, 33, 34, 0.35)", experience: "Learning"},
+    {name: "node", svg: nodeSimple, icon: node, isActive: true, color: "rgba(2, 49, 16, 0.35)", experience: "1 year"},
+    {name: "laravel", svg: laravelSimple, icon: laravel, isActive: true, color: "rgba(78, 23, 13, 0.35)", experience: "1 year"},
+]
+
+
 function iconsBackground(isFirefox) {
     if (isFirefox) {
         return svgWhiteListFirefox
@@ -64,4 +75,4 @@ function iconsBackground(isFirefox) {
 }
 
 
-export default {iconsBackground, svgColorList};
+export default {iconsBackground, svgColorList, svgSkillsCard};
