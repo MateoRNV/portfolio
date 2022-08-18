@@ -221,7 +221,7 @@
         width: 80%;
         font-weight: lighter;
         h2{
-            margin: 3rem 0 1rem 0;
+            margin: 2rem 0 1rem 0;
             font-family: $varela;
             font-size: 25px;
             text-align: start;
