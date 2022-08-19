@@ -24,6 +24,6 @@ a {
 }
 
 // function
-@function colorOpacity($color, $opacity){
+  @function colorOpacity($color, $opacity){
   @return rgba($color, $opacity);
 }

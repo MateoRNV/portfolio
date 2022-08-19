@@ -74,7 +74,7 @@
         font-weight: 500;
 
         & > span {
-            @extend .name--gradient;
+            @include name--gradient;
         }
     }
     .welcome{

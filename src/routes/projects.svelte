@@ -14,7 +14,7 @@
     }
 </script>
 
-<!-- {#if init} -->
+{#if init}
 <h1 in:animations.typewriter={{ speed: 1 }} out:fade>Projects</h1>
 
 <main in:fade={{ duration: 2000, delay: 1000 }} out:fade>
@@ -112,6 +112,7 @@
             <p>I have participated in projects managing both backend and frontend.</p>
             <p>In backend creating endpoints, handling data to store in a database, creating CRUDS, etc.</p>
             <p>In frontend receiving that data and showing it in a friendly way, making calls to the backend and making it reactive and responsive.</p>
+            <p>Here a demo project that have a laravel backend and a Vue frontend. It has simples Crud's and another features that explains in the app</p>
         </div>
         <div class="img_container">
             <div class="image image--projects">
@@ -129,7 +130,7 @@
     </section>
 </main>
 
-<!-- {/if} -->
+{/if}
 <style lang="scss">
     h1 {
         margin-top: 3rem;
@@ -207,7 +208,7 @@
             .foodProject{
                 margin-top: 3rem;
                 margin-left: 5rem;
-                width: 27rem;
+                width: 25rem;
                 border-radius: 20px;
             }
             img:hover {
@@ -246,5 +247,8 @@
     }
     .projects{
         margin: 5rem 3rem;
+        h2{
+            margin-top: 0rem;
+        }
     }
 </style>

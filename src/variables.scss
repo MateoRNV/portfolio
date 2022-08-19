@@ -38,7 +38,7 @@ $bg-text-color: rgba(255, 255, 255, 0.3);
   --navbar__background-color: #000;
 }
 
-.name--gradient {
+@mixin name--gradient {
   background: var(--text-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
