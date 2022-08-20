@@ -17,6 +17,7 @@
     import LaravelCard from "../components/Cards/LaravelCard.svelte";
 
     const skills = icons.svgSkillsCard;
+    const typewriter = animations.typewriter;
 
     let init = false
     let currentCard = "vue";
@@ -32,7 +33,7 @@
 
 {#if init}
 
-    <h1 in:animations.typewriter={{speed:1}} out:fade>Skills</h1>
+    <h1 in:typewriter={{speed:1}} out:fade>Skills</h1>
     <div class="back__buttom"><a in:fade={{duration:2000, delay:1000}} out:fade  href="/" class:disappear={y >= 50}> &#8592 Home</a></div>
 
     <div in:fade={{duration:2000, delay:1000}} out:fade class="skills flex">

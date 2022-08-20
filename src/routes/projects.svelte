@@ -3,6 +3,8 @@
     import animations from "../libs/header__animations";
     import { fade } from "svelte/transition";
 
+    const typewriter = animations.typewriter;
+
     let y;
     let init = false;
     onMount(() => {
@@ -15,7 +17,7 @@
 </script>
 
 {#if init}
-<h1 in:animations.typewriter={{ speed: 1 }} out:fade>Projects</h1>
+<h1 in:typewriter={{ speed: 1 }} out:fade>Projects</h1>
 
 <main in:fade={{ duration: 2000, delay: 1000 }} out:fade>
     <p class="intro">
@@ -139,15 +141,6 @@
         font-size: 30px;
         font-weight: lighter;
     }
-    .back__buttom {
-        margin: 0 auto 2rem auto;
-        width: 95%;
-        transition: top 1s ease-out;
-    }
-    .disappear {
-        position: absolute;
-        top: -5rem;
-    }
     main {
         margin: 0 auto;
         width: 90%;
@@ -162,7 +155,6 @@
             font-weight: lighter;
         }
     }
-
 // Main and all sections
     section {
         display: flex;
