@@ -46,15 +46,20 @@
             font-family: $josefin;
             font-size: 20px;
             color: white;
+            border: transparent;
             background: linear-gradient(135deg, rgba(255,255,255,1) 48%, var(--bg-color) 50%);
             background-size: 300%;
             background-position: 100%;
+            background-repeat: no-repeat;
             border-radius: 20px;
-            border: transparent;
+            animation: buttonAnimationReverse 1s;
+            animation-fill-mode: forwards;
+            transition: color 1s;
         }
         button:hover {
+            transition: color 1s;
             animation: buttonAnimation 1s;
-            animation-fill-mode: both;
+            animation-fill-mode: forwards;
             color: var(--bg-color);
             cursor: pointer;
         }
@@ -108,11 +113,16 @@
         0%{
             background-position: 100% 100%;
         }   
-        // 50%{
-        //     background-position: 50% 50%;
-        // }
         100%{
             background-position: 0% 0%;
+        }
+    }
+    @keyframes buttonAnimationReverse{
+        0%{
+            background-position: 0% 0%;
+        }   
+        100%{
+            background-position: 100% 100%;
         }
     }
 </style>
