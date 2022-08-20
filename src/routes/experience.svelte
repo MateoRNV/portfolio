@@ -18,7 +18,7 @@
 {#if init}
 
 <main>
-    <section in:fade={{ duration: 2000, delay: 1000 }} out:fade class="flex buttons">
+    <section in:fade={{ duration: 2000, delay: 1500 }} out:fade class="flex buttons">
         <button>Freelance</button><button>Internship</button><button
             >Courses</button
         ><button>University</button>
@@ -41,19 +41,21 @@
         margin-top: 8rem;
         gap: 8rem;
         button {
+            position: relative;
+            padding: 0.7rem 2rem;
             font-family: $josefin;
             font-size: 20px;
-            padding: 0.7rem 2rem;
             color: white;
-            background-color: transparent;
+            background: linear-gradient(135deg, rgba(255,255,255,1) 48%, var(--bg-color) 50%);
+            background-size: 300%;
+            background-position: 100%;
             border-radius: 20px;
             border: transparent;
-            transition: border 0.5s;
         }
         button:hover {
-            border-width: 1px;
-            border-style: solid;
-            border: 1px solid white;
+            animation: buttonAnimation 1s;
+            animation-fill-mode: both;
+            color: var(--bg-color);
             cursor: pointer;
         }
     }
@@ -84,15 +86,14 @@
         width: calc(100% + 4px);
         height: calc(100% + 4px);
         z-index: -1;
-        animation: steam 4s linear infinite;
+        animation: borderAnimation 4s linear infinite;
         // animation-direction: alternate;
-
     }
     .cards:after {
         filter: blur(10px);
     }
 
-    @keyframes steam {
+    @keyframes borderAnimation {
 	0% {
 		background-position: 83% 83%;
 	}
@@ -102,5 +103,16 @@
     100% {
         background-position: 10% 10%;
     }
-}
+    }
+    @keyframes buttonAnimation{
+        0%{
+            background-position: 100% 100%;
+        }   
+        // 50%{
+        //     background-position: 50% 50%;
+        // }
+        100%{
+            background-position: 0% 0%;
+        }
+    }
 </style>
