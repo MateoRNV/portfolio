@@ -7,6 +7,16 @@
     const typewriter = animations.typewriter;
 
     let init = false;
+    let current = "title";
+
+    function changeCard(card){
+        card = card.toLowerCase();
+        if (card === current) {
+            current = "title";           
+        }else{
+        current = card;
+        }
+    }
 
     onMount(() => {
         init = true;
@@ -19,13 +29,43 @@
 
 <main>
     <section in:fade={{ duration: 2000, delay: 1500 }} out:fade class="flex buttons">
-        <button>Freelance</button><button>Internship</button><button
-            >Courses</button
-        ><button>University</button>
+        <button on:click="{()=>{changeCard("Freelance")}}">Freelance</button>
+        <button on:click="{()=>{changeCard("Courses")}}">Courses</button>
+        <button on:click="{()=>{changeCard("Internship")}}">Internship</button>
+        <button on:click="{()=>{changeCard("University")}}">University</button>
     </section>
 
     <div class="cards flex">
+        {#if current == "title"}
         <h1 in:typewriter={{ speed: 1 }} out:fade>Experience</h1>
+        {:else if current != "title"}
+            <div class="card__details" in:fade={{duration:1000}}>   
+                {#if current == "freelance"}
+                    <p in:typewriter={{speed: 1}} out:fade>Jun 2021 | Aug 2022</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I have been working as a freelancer in Upwork and Workana for the last year, where I participated in different projects in both frontend and backend</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I worked mostly with Vue, Sass, pure Html/Css and vanilla Js on the frontend and on the backend I worked with node js (express) and PHP Laravel</p>
+                {/if}
+                {#if current == "courses"}
+                    <p in:typewriter={{speed: 1}} out:fade>Dez 2021 | Current</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I started to study on my own the new technologies, frameworks, etc. Complementing my previous university knowledge.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I study at platzi.com (with certificates) and youtube but I also like to read the official documentation of the new things and practice/play with every new thing I learn.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I like new technologies, so I will continue learning every day</p>
+                {/if}
+                {#if current == "internship"}
+                    <p in:typewriter={{speed: 1}} out:fade>Mar 2021 | Jun 2021</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I completed it at webtales and I learned how is the work on a professional team and developing professional apps with differents code patterns.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I developed responsive pages and components from a design. I did it with Vuejs, BassCss and Amp(to mobile optimization).</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>On the backend I handled data in GraphQL, Algolia and improve some endpoints of the api</p>
+                {/if}
+                {#if current == "university"}
+                    <p in:typewriter={{speed: 1}} out:fade> 2017 at Politecnico de Leiria</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I started in 2017 and learned the basics of computing. There I learned various programming languages (java, c#, c, php, javascript, python) at a basic level.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I learned some programming patterns like MVC, ERC, layer pattern.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I also learned algorithms and data structures and other things like IOT, networks, modeling and animation (blender), Artificial intelligence, Cybersecurity, etc.</p>
+                    <p in:fade={{duration:2000, delay:1000}} out:fade>I learned the basics of all that and only then I chose the web path and improved my skills on that path because I like it very much.</p>
+                {/if}
+            </div>
+        {/if}
     </div>
 </main>
 
@@ -66,11 +106,12 @@
     }
     h1{
         font-family: $josefin;
-        font-size: 45px;
+        font-size: 60px;
         font-weight: 500;
         color: white;
     }
     .cards{
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -96,6 +137,10 @@
     }
     .cards:after {
         filter: blur(10px);
+    }
+    .card__details{
+        width: 80%;
+        text-align: center;
     }
 
     @keyframes borderAnimation {

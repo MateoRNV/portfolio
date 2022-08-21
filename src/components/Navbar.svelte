@@ -8,10 +8,9 @@
 <nav class="flex navBar" class:slideDown={y >= 50 || scroll == true}>
     <h2><a href="/">Mateo Narváez</a></h2>
     <ul class="flex nav__menu">
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/experience">Experience</a></li>
-        <li />
+        <a href="/skills"><li>Skills</li></a>
+        <a href="/projects"><li>Projects</li></a>
+        <a href="/experience"><li>Experience</li></a>
     </ul>
 </nav>
 
@@ -19,7 +18,9 @@
 
     .navBar {
         max-width: 1440px;
+        margin: auto;
         top: -5rem;
+        left: auto;
         width: 100%;
         position: fixed;
         background-color: var(--navbar__background-color);
@@ -39,18 +40,51 @@
         justify-content: space-between;
     }
     .nav__menu {
-        gap: 3rem;
-        margin-right: 1rem;
+        margin:0 3rem;
         li {
-            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0rem;
+            width: 7rem;
+            height: 100%;
+            background-color:  var(--navbar__background-color);
+            transition: background-color 0.5s ease-out;
         }
-
         a {
+            padding-top: 0.2rem;
             font-family: $noto;
             color: white;
+            transition: color 1s;
         }
+        a:hover{
+            color: var(--navbar__background-color);
+            transition: color 0.5s ease-out;
+            li{
+                background-color: rgba(255, 255, 255, 0.911);
+                transition: background-color 0.5s ease-out;
+            }
+        }
+        
     }
     .slideDown{
         top: 0;
+    }
+    @keyframes buttonAnimation{
+        0%{
+            background-position: 100%;
+        }
+        100%{
+            background-position: 0%;
+        }
+    }
+    @keyframes buttonAnimationReverse{
+        0%{
+            background-position: 0%;
+        }
+        100%{
+            background-position: 100%;
+        }
     }
 </style>
