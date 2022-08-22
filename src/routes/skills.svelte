@@ -49,7 +49,7 @@
                     {#if currentCard == "vue"}
                         <VueCard />
                         {:else if currentCard == "svelte"}
-                        <VueCard />
+                        <SvelteCard />
                     {:else if currentCard == "react"}
                         <ReactCard />
                     {:else if currentCard == "node"}
@@ -72,14 +72,37 @@
         {/each}
     </div>
 
-    <div style="height: 100vh;" class="more flex" in:fade={{duration:2000, delay:1000}} out:fade>
+    <div class="more flex" in:fade={{duration:2000, delay:1000}} out:fade>
         <h2>More Skills</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla expedita, corrupti quibusdam error ullam eos molestiae molestias et repudiandae suscipit culpa iusto sunt voluptates a voluptatem, aperiam quaerat hic inventore!</p>
+        <p>In addition, I also have more skills that I have more or less knowledge of, so I will make a short descriptive list of them.</p>
+        <h3>Frontend</h3>
         <ul>
-            <li><span>Git:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis in excepturi nesciunt </li>
-            <li><span>Scrum .-</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam possimus cumque delectus consectetur a velit tenetur?</li>
-            <li><span>Bootstrap </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quidem. Doloribus error magnam porro laudantium est repudiandae libero ipsum omnis, vel velit animi autem alias exercitationem molestias rerum delectus ut.</li>
-            <li><span>Figma: </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora repellendus atque facere laboriosam numquam debitis expedita voluptatibus fugiat ut. Saepe veritatis blanditiis tempore non perferendis voluptate nostrum libero expedita.</li>
+            <li><span>SASS:</span>Learned it by my own. Almost all projects I can choose it for use, I rather it.</li>
+            <li><span>Tailwind, Bootstrap, etc:</span>I can use almost any design library to make projects easier.</li>
+            <li><span>NPM:</span>I watched some videos about it and then with the practice in the projects I improve it</li>
+            <li><span>Figma: </span>I know the basics and I use it to do drafts of a design</li>
+        </ul>
+        <h3>Databases</h3>
+        <ul>
+            <li><span>MYSQL:</span>I know how the lenguage, ORM model and how to handle DB's like Mysql, Oracle, etc. </li>
+            <li><span>No-relational DB:</span>Learned by myself (mongoDB), I learned to handle and get the data from a backend (node js) </li>
+        </ul>
+        <h3>Others (I think that these don't need a description)</h3>
+        <ul class="non-description">
+            <li>GIT</li>
+            <li>OOP</li>
+            <li>REST</li>
+            <li>MVC</li>
+            <li>SCRUM</li>
+            <li>Layers model</li>
+            <li>Blender</li>
+            <li>ETL (Data)</li>
+        </ul>
+        <h3>Other Lenguages</h3>
+        <ul>
+            <li><span>Java:</span>I used it almost all the time I was in college, with it I learned concepts like OOP, layer model, etc.</li>
+            <li><span>C:</span>Learned at university, with it I learned the basics of programming</li>
+            <li><span>C# and Python:</span>At college I used one to learn the basics of cybersecutiry and the second one to IOT, Both I know at a basic level</li>
         </ul>
     </div>
 
@@ -219,6 +242,7 @@
     .more{
         flex-direction: column;
         margin: auto;
+        margin-bottom: 2rem;
         width: 80%;
         font-weight: lighter;
         h2{
@@ -226,6 +250,16 @@
             font-family: $varela;
             font-size: 25px;
             text-align: start;
+        }
+        ul{
+            margin: 0;
+        }
+        .non-description{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 3rem;
+            list-style: outside;
         }
         li{
             margin: 1rem 0;

@@ -1,11 +1,11 @@
 <script>
-    export let scroll = false;
+    export let experience = false;
     let y;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="flex navBar" class:slideDown={y >= 50 || scroll == true}>
+<nav class="flex navBar" class:slideDown={y >= 50 || experience == true}>
     <h2><a href="/">Mateo Narváez</a></h2>
     <ul class="flex nav__menu">
         <a href="/skills"><li>Skills</li></a>

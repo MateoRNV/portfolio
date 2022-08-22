@@ -1,5 +1,5 @@
 <script>
-    import Header from "../sections/Header.svelte";
+    import Header from "../components/Header.svelte";
     import { onMount } from "svelte";
 
     import Icon from "svelte-icon/Icon.svelte";
@@ -40,7 +40,7 @@
         <h3>ABOUT ME</h3>
         <br>
         <p>Hey, I am Mateo Narvaez. I am a full-stack developer based in Leiria, Portugal. </p>
-        <p>I have worked with different types of front-end and back-end technologies. I work on different types of projects, developing from simple components to specific functions </p>
+        <p>I have worked with different types of front-end and back-end technologies participating on different kind of projects, developing from simple components to specific functions </p>
         <p>I love sports, food and travel.</p>
     </article>
     <article class="index__section">
@@ -61,7 +61,7 @@
     <section class="index__section">
         <h3>Projects</h3>
         <br>
-        <p>I have worked on several projects, doing diferents taks in front-end and back-end:</p>
+        <p>I participated on several projects, doing diferents taks in front-end and back-end:</p>
         <ul>
             <li>Simple components</li>
             <li>Landing Pages</li>

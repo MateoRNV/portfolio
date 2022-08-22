@@ -21,7 +21,7 @@
 
 <main in:fade={{ duration: 2000, delay: 1000 }} out:fade>
     <p class="intro">
-        I have worked doing from simple components to a bit complex tasks. Some
+        I have developed from simple components to a bit complex tasks. Some
         projects I cannot share the code. So here I put some simple demos of my
         projects and abilities
     </p>
@@ -101,7 +101,7 @@
         </div>
         <div class="landing__text">
             <h2>Landing pages</h2>
-            <p>As a freelancer I worked making some landing pages based on given designs.</p>
+            <p>As a freelancer I made some landing pages based on given designs.</p>
             <p>Usually I develop them in Sass, but depending on the complexity I can just do it in Html/Css or use some extra library or framework.</p>
         </div>
     </section>
@@ -111,7 +111,7 @@
     <section class="projects">
         <div>
             <h2>Complete projects</h2>
-            <p>I have participated in projects managing both backend and frontend.</p>
+            <p>I have been part of projects that have both, backend and frontend.</p>
             <p>In backend creating endpoints, handling data to store in a database, creating CRUDS, etc.</p>
             <p>In frontend receiving that data and showing it in a friendly way, making calls to the backend and making it reactive and responsive.</p>
             <p>Here a demo project that have a laravel backend and a Vue frontend. It has simples Crud's and another features that explains in the app</p>
