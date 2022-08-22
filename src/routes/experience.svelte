@@ -73,6 +73,7 @@
 <style lang="scss">
     main {
         width: 80%;
+        height: 100vh;
         margin: auto;
     }
     .buttons {

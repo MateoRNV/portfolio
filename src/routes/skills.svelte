@@ -251,6 +251,12 @@
             font-size: 25px;
             text-align: start;
         }
+        h3{
+            margin: 2rem 0 0 0;
+            font-family: $mukta;
+            font-size: 22px;
+            text-align: start;
+        }
         ul{
             margin: 0;
         }

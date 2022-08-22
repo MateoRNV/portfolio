@@ -14,7 +14,7 @@
 <Navbar />
 <ThemeMenu />
 
-<Footer />
+<!-- <Footer /> -->
 <style>
   .main {
     flex-direction: column;
