@@ -1,6 +1,4 @@
 <script>
-    
-
     export let experience = false;
     let open = false;
     let y;
