@@ -30,16 +30,16 @@
 <header class="header flex">
     {#if init} 
 
-        {#each  iconList as {svg, top, left, size, delay, duration, translateX, translateY}}
-            <div out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration, translateX, translateY}} class="svg" style="top:{top}; left:{left}"> <Icon data={svg} size={size} /> </div>
+        {#each  iconList as {svg, top, left, size, delay, duration, translateX, translateY, mobile = false}}
+            <div out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration, translateX, translateY}} class:mobileHide={mobile}  class="svg" style="top:{top}; left:{left}"> <Icon data={svg} size={size} /> </div>
         {/each}
         
         <span out:fade={{duration:1, delay:0.1000}} in:fadeScaleInOut={{delay: 1000, duration: 2500}} class="header__title welcome">Welcome</span>
         <h1 out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay: 4500, duration: 2000, baseScale: 0.8, translateX: -2, translateY: -3}}  class="header__title">Web Developer</h1>
         <h2 out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay: 4500, duration: 2200, baseScale: 0.9}} class="header__name"><span>Ma</span>teo <span>Na</span>rvaez</h2>
 
-        {#each words as { name, top, left, delay, duration }}
-            <p  out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration}} style="top: {top}; left: {left}">{@html name}</p>
+        {#each words as { name, top, left, delay, duration, mobile = false }}
+            <p  out:fade={{duration:1000, delay:0.1000}} in:fadeScale={{delay, duration}} class:mobileHide={mobile} style="top: {top}; left: {left}">{@html name}</p>
         {/each}
 
     {/if}
@@ -80,5 +80,18 @@
     .welcome{
         position: absolute;
         opacity: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+            .mobileHide{
+                opacity: 0.02;
+                display: none;
+            }
+            .header__title {
+                font-size: 40px;
+            }
+            .header__name {
+                font-size: 25px;
+            }
     }
 </style>

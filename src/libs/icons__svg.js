@@ -27,20 +27,20 @@ import laravelSimple from "../images/laravel.svg";
 
 
 const svgWhiteList=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "80%", translateX:3, translateY:10, duration:2000, delay:1500},
-    {svg: figmaWhite, top: "17%", left:"30%", size: "40%", translateX:3, translateY:10, duration:2000, delay:1500},
+    {svg: figmaWhite, top: "17%", left:"30%", size: "40%", translateX:3, translateY:10, duration:2000, delay:1500, mobile:true},
     {svg: laravelWhite, top: "16%", left:"59%", size: "75%", translateX:-4, translateY:4, duration:2000, delay:2500},
-    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500},
+    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500, mobile:true},
     {svg: svelteWhite, top: "58%", left:"7%", size: "50%", translateX:4, translateY:-4, duration:2000, delay:3000},
-    {svg: cssWhite, top: "70%", left:"42%", size: "53%", translateX:1, translateY:-4, duration:2000, delay:3000},
+    {svg: cssWhite, top: "70%", left:"42%", size: "53%", translateX:1, translateY:-4, duration:2000, delay:3000, mobile:true},
     {svg: vueWhite, top: "53%", left:"75%", size: "75%", translateX:-4, translateY:-4, duration:2000, delay:3000},
 ]
 
 const svgWhiteListFirefox=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "18%", translateX:3, translateY:10, duration:2000, delay:1500},
-    {svg: figmaWhite, top: "17%", left:"30%", size: "12%", translateX:3, translateY:10, duration:2000, delay:1500},
+    {svg: figmaWhite, top: "17%", left:"30%", size: "12%", translateX:3, translateY:10, duration:2000, delay:1500, mobile:true},
     {svg: laravelWhite, top: "16%", left:"59%", size: "50%", translateX:-4, translateY:4, duration:2000, delay:2500},
-    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500},
+    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500, mobile:true},
     {svg: svelteWhite, top: "58%", left:"7%", size: "13%", translateX:4, translateY:-4, duration:2000, delay:3000},
-    {svg: cssWhite, top: "70%", left:"42%", size: "19%", translateX:1, translateY:-4, duration:2000, delay:3000},
+    {svg: cssWhite, top: "70%", left:"42%", size: "19%", translateX:1, translateY:-4, duration:2000, delay:3000, mobile:true},
     {svg: vueWhite, top: "53%", left:"75%", size: "72%", translateX:-4, translateY:-4, duration:2000, delay:3000},
 ]
 

@@ -243,4 +243,67 @@
             margin-top: 0rem;
         }
     }
+
+    @media (max-width: 1000px) {
+        main{
+            .intro{
+                width: 100%;
+            }
+        }
+        section{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            font-weight: lighter;
+
+            div{
+                width: 80%;
+            }
+            .text--components{
+                margin: 0;
+                width: 90%;
+            }
+            h2{
+                margin-bottom: 2rem;
+            }
+            .img__container {
+                gap: 2rem;
+            }
+            .img_container{
+                order: 2;
+                margin: 0;
+
+                .image--landing{
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                    margin: auto;
+                    @media (max-width: 500px) {
+                        img{
+                            scale: 0.8;
+                        }
+                    }
+                }
+                .foodProject {
+                    margin-left: 0;
+                    @media (max-width: 500px) {
+                        scale: 0.8;
+                    }
+                }
+            }
+        }
+        .components{
+            margin: 0;
+        }
+        .landingPages {
+            margin: 0;
+            .landing__text{
+                width: 100%;
+            }
+        }
+        .projects{
+            margin: 2rem 0;
+        }
+    }
 </style>

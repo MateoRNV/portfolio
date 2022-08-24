@@ -73,7 +73,7 @@
 <style lang="scss">
     main {
         width: 80%;
-        height: 100vh;
+        min-height: 100vh;
         margin: auto;
     }
     .buttons {
@@ -117,8 +117,8 @@
         align-items: center;
         position: relative;
         margin: 3rem auto;
-        width: 45rem;
-        height: 20rem;
+        max-width: 45rem;
+        height: 25rem;
         background-color:  var(--bg-color);
         transition: background-color 2.5s ease;
     }
@@ -169,6 +169,35 @@
         }   
         100%{
             background-position: 100% 100%;
+        }
+    }
+    @media (max-width: 1200px) {
+        .buttons {
+            gap: 1rem;
+        }
+    }
+    @media (max-width: 670px) {
+        .cards{
+            margin: 1rem 0;
+            height: 28rem;
+        }
+    }
+    @media (max-width: 559px) {
+        p{
+            font-size: 14px;
+        }
+        .cards{
+            height: 26rem;
+        }
+    }
+    @media (max-width: 473px) {
+        .cards{
+            height: 35rem;
+        }
+    }
+    @media (max-width: 410px) {
+        .cards{
+            height: 38rem;
         }
     }
 </style>

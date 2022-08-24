@@ -87,7 +87,7 @@
             <li><span>MYSQL:</span>I know how the lenguage, ORM model and how to handle DB's like Mysql, Oracle, etc. </li>
             <li><span>No-relational DB:</span>Learned by myself (mongoDB), I learned to handle and get the data from a backend (node js) </li>
         </ul>
-        <h3>Others (I think that these don't need a description)</h3>
+        <h3>Others (These don't need a description)</h3>
         <ul class="non-description">
             <li>GIT</li>
             <li>OOP</li>
@@ -133,6 +133,10 @@
         margin: 0 auto;
         width: 65%;
         height: 65vh;
+
+        @media (max-width: 1025px) {
+            width: 85%;
+        }
     }
     .skill {
         display: flex;
@@ -264,7 +268,7 @@
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
-            gap: 3rem;
+            gap: 0 3rem;
             list-style: outside;
         }
         li{
@@ -275,6 +279,17 @@
                 font-weight: 500;
             }
         }
-
     }
+    @media (max-width: 800px) {
+            .skills{
+                flex-direction: column !important;
+                height: 90vh;
+            }
+            .card__main{
+                max-height: 68%;
+            }
+            .skill{
+                height: 9%;
+            }
+        }
 </style>

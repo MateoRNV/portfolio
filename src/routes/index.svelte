@@ -43,6 +43,7 @@
         <p>I have worked with different types of front-end and back-end technologies participating on different kind of projects, developing from simple components to specific functions </p>
         <p>I love sports, food and travel.</p>
     </article>
+    <hr class="mobile--only">
     <article class="index__section">
         <h3>SKILLS</h3>
         <br>
@@ -70,6 +71,7 @@
         </ul>
         <div class="section__button button__alt"><a href="/projects">Demos - Projects</a></div>
     </section>
+    <hr class="mobile--only">
     <section class="index__section">
         <h3>Experience</h3>
         <br>
@@ -98,6 +100,7 @@
             <li><Icon data={githubIcon} /><a class="button--none--style" href="https://github.com/MateoRNV">https://github.com/MateoRNV</a></li>
         </ul>
     </section>
+    <hr class="mobile--only" />
     <section class="index__section section__mytime flex">
         <h3 class="section__time">UTC + 1</h3>
         <br>
@@ -112,10 +115,18 @@
     hr{
         width: 92%;
     }
+    .mobile--only{
+        display: none;
+    }
+
     .index__section {
         margin: 2rem 2rem;
         width: 50%;
         padding: 0 5rem;
+
+        @media screen and (max-width: 1018px) {
+            padding: 0 2rem;
+        }
 
         h3{
             margin-bottom: 2rem;
@@ -213,5 +224,51 @@
         flex-direction: column;
         align-items: center;
         font-size: 40px;
+    }
+
+    //Mobile
+    @media screen and (max-width: 900px) {
+        section{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .index__section{
+            width: 80%;
+            h3{
+                margin-bottom: 1rem;
+            }
+            ul{
+                text-align: left;
+            }
+            li{
+                list-style: inside;
+                font-size: 20px;
+            }
+            .icons{
+                margin: auto;
+                margin-top: 2rem;
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+        .mobile--only{
+            display: block;
+        }
+        .section__contact{
+            ul{
+                padding: 0;
+            }
+            li{
+                text-align: center;
+                text-decoration: underline;
+                flex-direction: column;
+            }
+        }
+        .section__mytime{
+            margin-bottom: 7rem;
+        }
     }
 </style>
