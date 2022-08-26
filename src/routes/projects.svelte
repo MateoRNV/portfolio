@@ -51,7 +51,7 @@
                             "https://www.mateonarvaez.tech/Demo-Pages/interactive-rating-component-main/src/index.html"
                         );
                     }}
-                    src="src\images\demos\rating.PNG"
+                    src="images\demos\rating.PNG"
                     alt="rating"
                 />
             </div>
@@ -63,7 +63,7 @@
                         );
                     }}
                     class="eth"
-                    src="src\images\demos\nft.PNG"
+                    src="images\demos\nft.PNG"
                     alt="eth"
                 />
             </div>
@@ -75,7 +75,7 @@
                         );
                     }}
                     class="banner"
-                    src="src\images\demos\banner.PNG"
+                    src="images\demos\banner.PNG"
                     alt="banner"
                 />
             </div>
@@ -94,7 +94,7 @@
                         );
                     }}
                     class="sunnyside"
-                    src="src\images\demos\sunnyside.PNG"
+                    src="images\demos\sunnyside.PNG"
                     alt="sunnyside"
                 />
             </div>
@@ -125,7 +125,7 @@
                         );
                     }}
                     class="foodProject"
-                    src="src\images\demos\foodProject.PNG"
+                    src="images\demos\foodProject.PNG"
                     alt="food project"
                 />
             </div>
