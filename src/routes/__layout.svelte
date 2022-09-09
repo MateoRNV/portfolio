@@ -5,7 +5,6 @@
   import "../app.scss";
 </script>
 
-
 <!-- Main  -->
 <main class="main flex">
   <slot />

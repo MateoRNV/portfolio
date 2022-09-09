@@ -23,56 +23,222 @@ import vueSimple from "../images/vue.svg";
 import svelteSimple from "../images/svelte.svg";
 import reactSimple from "../images/react.svg";
 import nodeSimple from "../images/node.svg";
-import laravelSimple from "../images/laravel.svg"; 
+import laravelSimple from "../images/laravel.svg";
 
+const svgWhiteList = [
+  {
+    svg: reactWhite,
+    top: "-3%",
+    left: "-3%",
+    size: "80%",
+    translateX: 3,
+    translateY: 10,
+    duration: 2000,
+    delay: 1500,
+  },
+  {
+    svg: figmaWhite,
+    top: "17%",
+    left: "30%",
+    size: "40%",
+    translateX: 3,
+    translateY: 10,
+    duration: 2000,
+    delay: 1500,
+    mobile: true,
+  },
+  {
+    svg: laravelWhite,
+    top: "16%",
+    left: "59%",
+    size: "75%",
+    translateX: -4,
+    translateY: 4,
+    duration: 2000,
+    delay: 2500,
+  },
+  {
+    svg: nodeWhite,
+    top: "-1%",
+    left: "88%",
+    size: "100%",
+    translateX: -4,
+    translateY: 4,
+    duration: 2000,
+    delay: 2500,
+    mobile: true,
+  },
+  {
+    svg: svelteWhite,
+    top: "58%",
+    left: "7%",
+    size: "50%",
+    translateX: 4,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+  },
+  {
+    svg: cssWhite,
+    top: "70%",
+    left: "42%",
+    size: "53%",
+    translateX: 1,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+    mobile: true,
+  },
+  {
+    svg: vueWhite,
+    top: "53%",
+    left: "75%",
+    size: "75%",
+    translateX: -4,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+  },
+];
 
-const svgWhiteList=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "80%", translateX:3, translateY:10, duration:2000, delay:1500},
-    {svg: figmaWhite, top: "17%", left:"30%", size: "40%", translateX:3, translateY:10, duration:2000, delay:1500, mobile:true},
-    {svg: laravelWhite, top: "16%", left:"59%", size: "75%", translateX:-4, translateY:4, duration:2000, delay:2500},
-    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500, mobile:true},
-    {svg: svelteWhite, top: "58%", left:"7%", size: "50%", translateX:4, translateY:-4, duration:2000, delay:3000},
-    {svg: cssWhite, top: "70%", left:"42%", size: "53%", translateX:1, translateY:-4, duration:2000, delay:3000, mobile:true},
-    {svg: vueWhite, top: "53%", left:"75%", size: "75%", translateX:-4, translateY:-4, duration:2000, delay:3000},
-]
+const svgWhiteListFirefox = [
+  {
+    svg: reactWhite,
+    top: "-3%",
+    left: "-3%",
+    size: "18%",
+    translateX: 3,
+    translateY: 10,
+    duration: 2000,
+    delay: 1500,
+  },
+  {
+    svg: figmaWhite,
+    top: "17%",
+    left: "30%",
+    size: "12%",
+    translateX: 3,
+    translateY: 10,
+    duration: 2000,
+    delay: 1500,
+    mobile: true,
+  },
+  {
+    svg: laravelWhite,
+    top: "16%",
+    left: "59%",
+    size: "50%",
+    translateX: -4,
+    translateY: 4,
+    duration: 2000,
+    delay: 2500,
+  },
+  {
+    svg: nodeWhite,
+    top: "-1%",
+    left: "88%",
+    size: "100%",
+    translateX: -4,
+    translateY: 4,
+    duration: 2000,
+    delay: 2500,
+    mobile: true,
+  },
+  {
+    svg: svelteWhite,
+    top: "58%",
+    left: "7%",
+    size: "13%",
+    translateX: 4,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+  },
+  {
+    svg: cssWhite,
+    top: "70%",
+    left: "42%",
+    size: "19%",
+    translateX: 1,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+    mobile: true,
+  },
+  {
+    svg: vueWhite,
+    top: "53%",
+    left: "75%",
+    size: "72%",
+    translateX: -4,
+    translateY: -4,
+    duration: 2000,
+    delay: 3000,
+  },
+];
 
-const svgWhiteListFirefox=[ {svg: reactWhite, top: "-3%", left:"-3%", size: "18%", translateX:3, translateY:10, duration:2000, delay:1500},
-    {svg: figmaWhite, top: "17%", left:"30%", size: "12%", translateX:3, translateY:10, duration:2000, delay:1500, mobile:true},
-    {svg: laravelWhite, top: "16%", left:"59%", size: "50%", translateX:-4, translateY:4, duration:2000, delay:2500},
-    {svg: nodeWhite, top: "-1%", left:"88%", size: "100%", translateX:-4, translateY:4, duration:2000, delay:2500, mobile:true},
-    {svg: svelteWhite, top: "58%", left:"7%", size: "13%", translateX:4, translateY:-4, duration:2000, delay:3000},
-    {svg: cssWhite, top: "70%", left:"42%", size: "19%", translateX:1, translateY:-4, duration:2000, delay:3000, mobile:true},
-    {svg: vueWhite, top: "53%", left:"75%", size: "72%", translateX:-4, translateY:-4, duration:2000, delay:3000},
-]
+//Color icons to index
+const svgColorList = [
+  { svg: vue, size: "12%" },
+  { svg: svelte, size: "12%" },
+  { svg: react, size: "12%", opacity: 0.4 },
+  { svg: node, size: "12%" },
+  { svg: laravel, size: "14%" },
+  { svg: sass, size: "12%" },
+  { svg: html, size: "12%" },
+  { svg: css, size: "12%" },
+  { svg: javascript, size: "12%" },
+];
 
-
-//Color icons to index            
-const svgColorList =[   {svg: vue, size: "12%"},
-                        {svg: svelte, size: "12%"},
-                        {svg: react, size: "12%",  opacity: 0.4},
-                        {svg: node, size: "12%"},
-                        {svg: laravel, size: "14%"},
-                        {svg: sass,  size: "12%"},
-                        {svg: html, size: "12%"},
-                        {svg: css, size: "12%"},
-                        {svg: javascript, size: "12%"},
-            ]
-            
 const svgSkillsCard = [
-    {name: "vue", svg: vueSimple, icon: vue, isActive: true, color: "rgba(0, 138, 120, 0.1)", experience: "1.5 years"},
-    {name: "svelte", svg: svelteSimple, icon: svelte, isActive: true, color: "rgba(88, 57, 31, 0.35)", experience: "4 months"},
-    {name: "react", svg: reactSimple, icon: react, isActive: true, color: "rgba(3, 33, 34, 0.35)", experience: "Learning"},
-    {name: "node", svg: nodeSimple, icon: node, isActive: true, color: "rgba(2, 49, 16, 0.35)", experience: "1 year"},
-    {name: "laravel", svg: laravelSimple, icon: laravel, isActive: true, color: "rgba(78, 23, 13, 0.35)", experience: "1 year"},
-]
-
+  {
+    name: "vue",
+    svg: vueSimple,
+    icon: vue,
+    isActive: true,
+    color: "rgba(0, 138, 120, 0.1)",
+    experience: "1.5 years",
+  },
+  {
+    name: "svelte",
+    svg: svelteSimple,
+    icon: svelte,
+    isActive: true,
+    color: "rgba(88, 57, 31, 0.35)",
+    experience: "> 1 year",
+  },
+  {
+    name: "react",
+    svg: reactSimple,
+    icon: react,
+    isActive: true,
+    color: "rgba(3, 33, 34, 0.35)",
+    experience: "> 1 year",
+  },
+  {
+    name: "node",
+    svg: nodeSimple,
+    icon: node,
+    isActive: true,
+    color: "rgba(2, 49, 16, 0.35)",
+    experience: "1 year",
+  },
+  {
+    name: "laravel",
+    svg: laravelSimple,
+    icon: laravel,
+    isActive: true,
+    color: "rgba(78, 23, 13, 0.35)",
+    experience: "1 year",
+  },
+];
 
 function iconsBackground(isFirefox) {
-    if (isFirefox) {
-        return svgWhiteListFirefox
-    }else{
-        return svgWhiteList
-    }
+  if (isFirefox) {
+    return svgWhiteListFirefox;
+  } else {
+    return svgWhiteList;
+  }
 }
 
-
-export default {iconsBackground, svgColorList, svgSkillsCard};
+export default { iconsBackground, svgColorList, svgSkillsCard };

@@ -1,35 +1,44 @@
+<p>I learned it in June 2022. So I'm a bit new to this framework.</p>
 <p>
-    I'm still learning it online at platzi.com, reading the official documentation, and practicing each concept by myself.
+  I am now working at <a href="https://www.lexir.com" target="_blank"
+    >Lexir Inc.</a
+  > as a frontend developer
 </p>
-<p>I didn't have professional experience with it yet, but I'm working on personal projects to learn better.</p>
-<p>Soon I will be uploading my personal projects in a new tab on this page</p>
+<p>
+  I am working with NextJs and Typescript as a javasript framework and with
+  Tailwind as a Css Library
+</p>
+<p>Soon I will be adding some personal projects with react, next, etc</p>
 
 <ul>
-    <li>Soon</li>
+  <li>Soon</li>
 </ul>
 
 <style lang="scss">
-    p {
-        margin: 0.5rem 1rem;
-        font-family: $varela;
-        font-size: 16px;
-        font-weight: lighter;
-        line-height: 1.5;
-        color: white;
-    }
-    ul {
-        list-style: outside;
-        font-weight: lighter;
-        font-size: 14px;
-    }
-    li {
-        font-family: $varela;
-        margin: 0.5rem 0;
-    }
+  p {
+    margin: 0.5rem 1rem;
+    font-family: $varela;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: white;
     a {
-        margin: 2rem 1rem;
-        color: white;
-        font-weight: lighter;
-        font-size: 16px;
+      margin: 0;
     }
+  }
+  ul {
+    list-style: outside;
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  li {
+    font-family: $varela;
+    margin: 0.5rem 0;
+  }
+  a {
+    margin: 2rem 1rem;
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+  }
 </style>
