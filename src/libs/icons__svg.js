@@ -213,7 +213,7 @@ const svgSkillsCard = [
     icon: react,
     isActive: true,
     color: "rgba(3, 33, 34, 0.35)",
-    experience: "> 1 year",
+    experience: " 6 months",
   },
   {
     name: "node",

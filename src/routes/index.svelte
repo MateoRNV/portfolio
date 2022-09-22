@@ -95,8 +95,8 @@
       technologies
     </p>
     <ul>
-      <li>Lexir Inc: Sep-22 | Current</li>
-      <li>Freelance: Jun-21 | Aug-22</li>
+      <li>Freelance: Jun-21 | Current</li>
+      <li>Courses: Jun-21 | Current</li>
       <li>Internship: Mar-21 | Jun-21</li>
       <li>University - Computer Science: 2017</li>
     </ul>

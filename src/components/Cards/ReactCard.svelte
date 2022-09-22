@@ -1,17 +1,20 @@
-<p>I learned it in June 2022. So I'm a bit new to this framework.</p>
 <p>
-  I am now working at <a href="https://www.lexir.com" target="_blank"
-    >Lexir Inc.</a
-  > as a frontend developer
+  I learned it in Jan 2022. I started with it at personal projects and then I
+  started to have some professional projects
 </p>
 <p>
-  I am working with NextJs and Typescript as a javasript framework and with
+  Where I had more experience with React was at Lexir Inc where I worked for 6
+  months as a freelance front-end developer
+</p>
+<p>
+  I am worked there with NextJs and Typescript as a javasript framework and with
   Tailwind as a Css Library
 </p>
-<p>Soon I will be adding some personal projects with react, next, etc</p>
 
 <ul>
-  <li>Soon</li>
+  <li>
+    <a href="https://lexir.com" target="_blank">Lexir.com </a>
+  </li>
 </ul>
 
 <style lang="scss">

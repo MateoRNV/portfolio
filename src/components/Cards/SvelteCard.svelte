@@ -1,5 +1,5 @@
 <p>
-  I learned it in February 2022 on my own, playing with the official svelte
+  I learned it at March 2022 on my own, playing with the official svelte
   tutorial and reading the documentation for it and the svelte kit.
 </p>
 <p>

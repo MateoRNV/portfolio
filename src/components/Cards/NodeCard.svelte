@@ -1,4 +1,4 @@
-<p>I have some project experience with GraphQL and node(Express).</p>
+<p>I have some experience with GraphQL and node(Express).</p>
 <p>
   As a freelance I contributed by handling data from databases and making them
   available with REST APIs in Express
