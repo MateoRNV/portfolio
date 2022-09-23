@@ -25,9 +25,6 @@
     font-weight: lighter;
     line-height: 1.5;
     color: white;
-    a {
-      margin: 0;
-    }
   }
   ul {
     list-style: outside;
