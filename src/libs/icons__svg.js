@@ -197,7 +197,7 @@ const svgSkillsCard = [
     icon: vue,
     isActive: true,
     color: "rgba(0, 138, 120, 0.1)",
-    experience: "1.5 years",
+    experience: "1 years",
   },
   {
     name: "svelte",
@@ -213,7 +213,7 @@ const svgSkillsCard = [
     icon: react,
     isActive: true,
     color: "rgba(3, 33, 34, 0.35)",
-    experience: " 6 months",
+    experience: " 1 year",
   },
   {
     name: "node",
@@ -221,7 +221,7 @@ const svgSkillsCard = [
     icon: node,
     isActive: true,
     color: "rgba(2, 49, 16, 0.35)",
-    experience: "1 year",
+    experience: "<1 year",
   },
   {
     name: "laravel",

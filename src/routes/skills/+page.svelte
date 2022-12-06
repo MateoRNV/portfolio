@@ -3,18 +3,18 @@
 
   // Icons
   import Icon from "svelte-icon/Icon.svelte";
-  import icons from "../libs/icons__svg.js";
+  import icons from "../../libs/icons__svg.js";
 
   // Animations
-  import animations from "../libs/header__animations";
+  import animations from "../../libs/header__animations";
   import { fade } from "svelte/transition";
 
   // imports cards
-  import VueCard from "../components/Cards/VueCard.svelte";
-  import SvelteCard from "../components/Cards/SvelteCard.svelte";
-  import ReactCard from "../components/Cards/ReactCard.svelte";
-  import NodeCard from "../components/Cards/NodeCard.svelte";
-  import LaravelCard from "../components/Cards/LaravelCard.svelte";
+  import VueCard from "../../components/Cards/VueCard.svelte";
+  import SvelteCard from "../../components/Cards/SvelteCard.svelte";
+  import ReactCard from "../../components/Cards/ReactCard.svelte";
+  import NodeCard from "../../components/Cards/NodeCard.svelte";
+  import LaravelCard from "../../components/Cards/LaravelCard.svelte";
 
   const skills = icons.svgSkillsCard;
   const typewriter = animations.typewriter;

@@ -47,9 +47,9 @@
       Portugal.
     </p>
     <p>
-      I have worked with different types of front-end and back-end technologies
+      I have worked with different front-end and back-end technologies
       participating on different kind of projects, developing from simple
-      components to specific functions
+      components to specific functionalities
     </p>
     <p>I love sports, food and travel.</p>
   </article>
@@ -95,10 +95,10 @@
       technologies
     </p>
     <ul>
-      <li>Freelance: Jun-21 | Current</li>
-      <li>Courses: Jun-21 | Current</li>
+      <li>Freelance: Sep-21 | Current</li>
+      <li>Courses and Bootcamps: Jun-21 | Current</li>
       <li>Internship: Mar-21 | Jun-21</li>
-      <li>University - Computer Science: 2017</li>
+      <li>University - Computer Science: 2021</li>
     </ul>
     <div class="section__button"><a href="/experience">More Info</a></div>
   </section>

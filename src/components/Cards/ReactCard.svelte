@@ -3,12 +3,12 @@
   started to have some professional projects
 </p>
 <p>
-  Where I had more experience with React was at Lexir Inc where I worked for 6
-  months as a freelance front-end developer
+  Where I had more experience with React was at Lexir Inc where I started as a
+  freelancer and the I had the full-time position as a front-end developer
 </p>
 <p>
-  I am worked there with NextJs and Typescript as a javasript framework and with
-  Tailwind as a Css Library
+  I am worked there for more than 6 months with NextJs and Typescript as a
+  javasript framework and with Tailwind as a Css Library
 </p>
 
 <ul>

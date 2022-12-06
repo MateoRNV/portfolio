@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import Navbar from "../components/Navbar.svelte";
-  import animations from "../libs/header__animations";
+  import Navbar from "../../components/Navbar.svelte";
+  import animations from "../../libs/header__animations";
   import { fade } from "svelte/transition";
 
   const typewriter = animations.typewriter;
