@@ -42,20 +42,34 @@
     }
 
     a {
-      padding: 0.5rem 1rem;
-      color: var(--bg-color);
-      background-color: white;
-      border-radius: 30px;
-
-      transition: all 0.5s ease-out;
+      position: relative;
+      padding: 0.7rem 2rem;
+      font-family: $josefin;
+      font-size: 20px;
+      color: white;
+      border: transparent;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 48%,
+        var(--bg-color) 50%
+      );
+      background-size: 300%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      animation: buttonAnimationReverse 1s;
+      animation-fill-mode: forwards;
+      transition: color 1s;
     }
     a:hover {
-      background-color: var(--bg-color);
-      border: 1px solid white;
-      color: white;
+      transition: color 1s;
+      animation: buttonAnimation 1s;
+      animation-fill-mode: forwards;
+      color: var(--bg-color);
+      cursor: pointer;
     }
     .section__button {
-      margin-top: 3rem;
+      margin-top: 4rem;
       float: right;
     }
   }
@@ -72,6 +86,23 @@
         margin: auto;
         margin-top: 2rem;
       }
+    }
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  @keyframes buttonAnimationReverse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
     }
   }
 </style>
