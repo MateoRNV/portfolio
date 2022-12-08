@@ -13,6 +13,7 @@ import svelte from "../images/svelte.svg?raw";
 import react from "../images/react.svg?raw";
 import node from "../images/node.svg?raw";
 import laravel from "../images/laravel.svg?raw";
+import golang from "../images/golang.svg?raw";
 import sass from "../images/sass.svg?raw";
 import html from "../images/html.svg?raw";
 import css from "../images/css.svg?raw";
@@ -178,13 +179,14 @@ const svgWhiteListFirefox = [
 ];
 
 //Color icons to index
-const svgColorList = [
+const svgIndexPageList = [
   { svg: vue, size: "12%" },
-  { svg: svelte, size: "12%" },
   { svg: react, size: "12%", opacity: 0.4 },
-  { svg: node, size: "12%" },
+  { svg: svelte, size: "12%" },
   { svg: laravel, size: "14%" },
-  { svg: sass, size: "12%" },
+  { svg: golang, size: "14%" },
+  { svg: node, size: "12%" },
+  // { svg: sass, size: "12%" },
   { svg: html, size: "12%" },
   { svg: css, size: "12%" },
   { svg: javascript, size: "12%" },
@@ -241,4 +243,4 @@ function iconsBackground(isFirefox) {
   }
 }
 
-export default { iconsBackground, svgColorList, svgSkillsCard };
+export default { iconsBackground, svgIndexPageList, svgSkillsCard };

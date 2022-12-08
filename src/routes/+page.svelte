@@ -9,7 +9,7 @@
   import gmail from "../images/gmail.svg?raw";
   import linkedin from "../images/linkedin.svg?raw";
 
-  const icons = iconsSvg.svgColorList;
+  const icons = iconsSvg.svgIndexPageList;
 
   const options = {
     timeZone: "Europe/Lisbon",
@@ -73,8 +73,8 @@
     <h3>Projects</h3>
     <br />
     <p>
-      I participated on several projects, doing diferents taks in front-end and
-      back-end:
+      I participated on several projects as a freelancer, doing diferents taks
+      in both front-end and back-end
     </p>
     <ul>
       <li>Simple components</li>
@@ -83,7 +83,7 @@
       <li>Complete projects with front-end and back-end</li>
     </ul>
     <div class="section__button button__alt">
-      <a href="/projects">Demos - Projects</a>
+      <a href="/projects">Projects</a>
     </div>
   </section>
   <hr class="mobile--only" />
@@ -95,12 +95,13 @@
       technologies
     </p>
     <ul>
-      <li>Freelance: Sep-21 | Current</li>
-      <li>Courses and Bootcamps: Jun-21 | Current</li>
-      <li>Internship: Mar-21 | Jun-21</li>
+      <li>Front-end Dev | Lexir Inc : Jan-22 | Nov - 22</li>
+      <li>Freelance: Sep-21 | Jan - 22</li>
+      <li>Courses and Certifications: Sep - 21 | Current</li>
+      <li>Internship: Mar - 21 | Jun - 21</li>
       <li>University - Computer Science: 2021</li>
     </ul>
-    <div class="section__button"><a href="/experience">More Info</a></div>
+    <!-- <div class="section__button"><a href="/experience">More Info</a></div> -->
   </section>
 </section>
 

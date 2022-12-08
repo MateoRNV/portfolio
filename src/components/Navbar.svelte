@@ -35,19 +35,19 @@
           open = false;
         }}><li>Demos</li></a
       >
-      <a
+      <!-- <a
         href="/experience"
         on:click={() => {
           open = false;
         }}><li>Experience</li></a
-      >
+      > -->
     </ul>
   </div>
 
   <ul class="flex nav__menu">
     <a href="/skills"><li>Skills</li></a>
-    <a href="/projects"><li>Demos</li></a>
-    <a href="/experience"><li>Experience</li></a>
+    <a href="/projects"><li>Projects</li></a>
+    <!-- <a href="/experience"><li>Experience</li></a> -->
   </ul>
 </nav>
 
