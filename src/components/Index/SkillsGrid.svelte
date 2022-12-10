@@ -43,7 +43,7 @@
 
     a {
       position: relative;
-      padding: 0.7rem 2rem;
+      padding: 0.7rem 1.5rem;
       font-family: $josefin;
       font-size: 20px;
       color: white;
@@ -59,12 +59,13 @@
       border-radius: 20px;
       animation: buttonAnimationReverse 1s;
       animation-fill-mode: forwards;
-      transition: color 1s;
+      transition: all 1s;
     }
     a:hover {
       transition: color 1s;
       animation: buttonAnimation 1s;
       animation-fill-mode: forwards;
+      text-decoration: none;
       color: var(--bg-color);
       cursor: pointer;
     }
@@ -85,6 +86,9 @@
       .icons {
         margin: auto;
         margin-top: 2rem;
+      }
+      .section__button {
+        float: none;
       }
     }
   }

@@ -11,8 +11,8 @@
     <li>Api connections, creation of endpoints</li>
     <li>Complete projects with front-end and back-end</li>
   </ul>
-  <div class="section__button button__alt">
-    <a href="/projects">Projects</a>
+  <div class="section__button ">
+    <a href="/projects">More Details</a>
   </div>
 </section>
 
@@ -51,17 +51,32 @@
     }
 
     a {
-      padding: 0.5rem 1rem;
-      color: var(--bg-color);
-      background-color: white;
-      border-radius: 30px;
-
-      transition: all 0.5s ease-out;
+      position: relative;
+      padding: 0.7rem 1.5rem;
+      font-family: $josefin;
+      font-size: 20px;
+      color: white;
+      border: transparent;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 48%,
+        var(--bg-color) 50%
+      );
+      background-size: 300%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      animation: buttonAnimationReverse 1s;
+      animation-fill-mode: forwards;
+      transition: all 1s;
     }
     a:hover {
-      background-color: var(--bg-color);
-      border: 1px solid white;
-      color: white;
+      transition: color 1s;
+      animation: buttonAnimation 1s;
+      animation-fill-mode: forwards;
+      text-decoration: none;
+      color: var(--bg-color);
+      cursor: pointer;
     }
     .section__button {
       margin-top: 3rem;
@@ -101,10 +116,28 @@
         list-style: inside;
         font-size: 20px;
       }
-
       p {
         font-size: 22px;
       }
+      .section__button {
+        float: none;
+      }
+    }
+  }
+  @keyframes buttonAnimation {
+    0% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  @keyframes buttonAnimationReverse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
     }
   }
 </style>
