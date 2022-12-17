@@ -6,7 +6,7 @@
     technologies
   </p>
   <ul>
-    <li>Front-end Dev | Lexir Inc : Jan-22 | Nov - 22</li>
+    <li>Front-end Dev | Lexir Inc : Jan-22 | Dec - 22</li>
     <li>Freelance: Sep-21 | Jan - 22</li>
     <li>Courses and Certifications: Sep - 21 | Current</li>
     <li>Internship: Mar - 21 | Jun - 21</li>

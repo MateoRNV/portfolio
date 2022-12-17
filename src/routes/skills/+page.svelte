@@ -1,26 +1,15 @@
 <script>
   import { onMount } from "svelte";
 
-  // Icons
-  import Icon from "svelte-icon/Icon.svelte";
-  import icons from "../../libs/icons__svg.js";
-
   // Animations
   import animations from "../../libs/header__animations";
   import { fade } from "svelte/transition";
 
-  // imports cards
-  import VueCard from "../../components/Cards/VueCard.svelte";
-  import SvelteCard from "../../components/Cards/SvelteCard.svelte";
-  import ReactCard from "../../components/Cards/ReactCard.svelte";
-  import NodeCard from "../../components/Cards/NodeCard.svelte";
-  import LaravelCard from "../../components/Cards/LaravelCard.svelte";
+  import Cards from "../../components/Skills/Cards.svelte";
 
-  const skills = icons.svgSkillsCard;
   const typewriter = animations.typewriter;
 
   let init = false;
-  let currentCard = "vue";
   let y;
 
   onMount(() => {
@@ -43,45 +32,7 @@
     >
   </div>
 
-  <div in:fade={{ duration: 2000, delay: 1000 }} out:fade class="skills flex">
-    {#each skills as { name, svg, icon, color, experience }}
-      <div
-        class="skill"
-        class:active={currentCard === name}
-        on:click={() => (currentCard = name)}
-        style="background-color: {color}; background-image: url({svg});"
-      >
-        {#if currentCard == name}
-          <div
-            class="card__main"
-            style="--scrollBarColor: {color}"
-            in:fade={{ duration: 1000, delay: 500 }}
-          >
-            {#if currentCard == "vue"}
-              <VueCard />
-            {:else if currentCard == "svelte"}
-              <SvelteCard />
-            {:else if currentCard == "react"}
-              <ReactCard />
-            {:else if currentCard == "node"}
-              <NodeCard />
-            {:else if currentCard == "laravel"}
-              <LaravelCard />
-            {/if}
-          </div>
-        {/if}
-
-        <!-- Card header -->
-        <div class="card__icon"><Icon data={icon} /></div>
-        <div class="card__info">
-          <div class="card__info__title flex">
-            <h3>{name}</h3>
-            <span>{experience}</span>
-          </div>
-        </div>
-      </div>
-    {/each}
-  </div>
+  <Cards />
 
   <div class="more flex" in:fade={{ duration: 2000, delay: 1000 }} out:fade>
     <h2>More Skills</h2>
@@ -89,71 +40,64 @@
       In addition, I also have more skills that I have more or less knowledge
       of, so I will make a short descriptive list of them.
     </p>
-    <h3>Relevant</h3>
-    <ul class="non-description">
-      <li>NextJs</li>
-      <li>NuxtJs</li>
-      <li>Typescript</li>
-      <li>Tailwind</li>
-      <li>GraphQL</li>
-    </ul>
-    <h3>Frontend</h3>
-    <ul>
-      <li>
-        <span>SASS:</span>Learned it by my own. Almost all projects I can choose
-        it for use, I rather it.
-      </li>
-      <li>
-        <span>Bootstrap:</span>I can use almost any design library to make
-        projects easier.
-      </li>
-      <li>
-        <span>Figma: </span>I know the basics and I use it to do drafts of a
-        design
-      </li>
-    </ul>
-    <h3>Databases</h3>
-    <ul>
-      <li>
-        <span>MYSQL:</span>I know the lenguage, ORM model and how to handle DB's
-        like Mysql, Oracle, etc.
-      </li>
-      <li>
-        <span>No-relational DB:</span>Learned by myself (mongoDB), I learned to
-        handle and get the data from a backend (node js)
-      </li>
-    </ul>
-    <h3>Patterns</h3>
-    <ul class="non-description">
-      <li>BEM(CSS)</li>
-      <li>OOP</li>
-      <li>MVC</li>
-      <li>Layers model</li>
-      <li>Prototype</li>
-    </ul>
-    <h3>Others</h3>
-    <ul class="non-description">
-      <li>SCRUM</li>
-      <li>KANBAN</li>
-      <li>GIT</li>
-      <li>REST</li>
-      <li>Storybook</li>
-    </ul>
-    <h3>Other Lenguages</h3>
-    <ul>
-      <li>
-        <span>Java:</span>I used it almost all the time I was in college, with
-        it I learned concepts like OOP, layer model, etc.
-      </li>
-      <li>
-        <span>C:</span>Learned at university, with it I learned the basics of
-        programming
-      </li>
-      <li>
-        <span>C# and Python:</span>At college I used one to learn the basics of
-        cybersecutiry and the second one to IOT, Both I know at a basic level
-      </li>
-    </ul>
+    <div class="mini-cards-container">
+      <div class="mini-card">
+        <h3>Frameworks / Lenguages</h3>
+        <ul class="centered-list ">
+          <li>NextJs</li>
+          <li>NuxtJs</li>
+          <li>Gin</li>
+          <li>Typescript</li>
+          <li>GraphQL</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h3>Frontend</h3>
+        <ul class="centered-list ">
+          <li>SASS</li>
+          <li>Bootstrap</li>
+          <li>Figma</li>
+          <li>Tailwind</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h3>Databases</h3>
+        <ul class="centered-list ">
+          <li>MYSQL</li>
+          <li>MongoDB</li>
+          <li>No-relational DB's</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h3>Patterns</h3>
+        <ul class="centered-list ">
+          <li>BEM(CSS)</li>
+          <li>OOP</li>
+          <li>MVC</li>
+          <li>Layers model</li>
+          <li>Module</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h3>Others</h3>
+        <ul class="centered-list ">
+          <li>SCRUM</li>
+          <li>KANBAN</li>
+          <li>GIT</li>
+          <li>REST</li>
+          <li>Storybook</li>
+        </ul>
+      </div>
+      <div class="mini-card">
+        <h3>Other Lenguages</h3>
+        <ul class="centered-list">
+          <li>Java</li>
+          <li>C#</li>
+          <li>C and C++</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </div>
   </div>
 {/if}
 
@@ -175,120 +119,6 @@
     position: absolute;
     top: -5rem;
   }
-  // skills section
-  .skills {
-    gap: 1rem;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 65%;
-    height: 65vh;
-
-    @media (max-width: 1025px) {
-      width: 85%;
-    }
-  }
-  .skill {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    min-width: 3.5rem;
-    height: 100%;
-    border-radius: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transition: flex-grow 0.7s ease-out;
-  }
-  .active {
-    flex-grow: 1;
-    justify-content: flex-start;
-    padding: 0 1.5rem;
-  }
-  .card__info {
-    display: none;
-
-    transition: all 0.7s ease-out;
-
-    h3 {
-      display: inline-block;
-      margin: 0;
-    }
-  }
-  .active .card__info {
-    width: 80%;
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    padding: 1rem 2rem;
-
-    .card__info__title {
-      margin-left: 1.5rem;
-      display: flex;
-      flex-direction: column;
-
-      h3 {
-        font-size: 18px;
-        text-transform: capitalize;
-      }
-      span {
-        font-size: 14px;
-      }
-    }
-
-    // border: 1px solid white;
-  }
-  //cards style and scrollbar
-  .card__main {
-    display: none;
-    transition: all 0.7s ease-out;
-    max-height: 19rem;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollBarColor) transparent;
-  }
-  .card__main::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  .card__main::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 100px;
-  }
-  .card__main::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    background-color: var(--scrollBarColor);
-  }
-  .active .card__main {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    padding: 0 1rem;
-    top: 7%;
-  }
-  .card__icon {
-    position: absolute;
-    bottom: 5%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 40px;
-    max-width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: #212123;
-  }
-  //card opacity on click
-  .skill.active::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
 
   // more skills section
   .more {
@@ -304,40 +134,61 @@
       text-align: start;
     }
     h3 {
-      margin: 2rem 0 0 0;
+      margin: 0;
       font-family: $mukta;
       font-size: 22px;
-      text-align: start;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.459);
+      border-radius: 0.5rem;
     }
-    ul {
-      margin: 0;
-    }
-    .non-description {
+
+    .mini-cards-container {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      gap: 0 3rem;
+      gap: 3rem;
+      margin: 2rem 0;
+    }
+    .mini-card {
+      position: relative;
+      width: 25rem;
+      margin: 0 2rem;
+      padding: 1rem 0;
+      z-index: 0;
+      border-radius: 2rem;
+      background: var(--bg-color);
+    }
+    .centered-list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 2rem 5rem;
+      gap: 2.5rem 3rem;
       list-style: outside;
     }
-    li {
-      margin: 1rem 0;
-      & > span {
-        margin-right: 1rem;
-        // text-decoration: underline;
-        font-weight: 500;
-      }
+
+    .mini-card:hover::after {
+      box-shadow: 0px 0px 5px rgb(0, 0, 0);
+      filter: blur(2px);
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: calc(100% + 5px);
+      height: calc(100% + 5px);
+      left: -2px;
+      top: -2px;
+      border-radius: 2rem;
     }
   }
-  @media (max-width: 800px) {
-    .skills {
-      flex-direction: column !important;
-      height: 90vh;
+  @keyframes borderAnimation {
+    0% {
+      background-position: 83% 83%;
     }
-    .card__main {
-      max-height: 68%;
+    50% {
+      background-position: 50% 50%;
     }
-    .skill {
-      height: 9%;
+    100% {
+      background-position: 10% 10%;
     }
   }
 </style>
