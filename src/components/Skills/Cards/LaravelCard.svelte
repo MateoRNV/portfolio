@@ -1,44 +1,28 @@
 <p>
-  I learned it in university, and I worked on some freelance projects with it.
+  I learned it at university, and I have professional experience with it. I have
+  worked as a freelancer contributing to some projects that used Laravel as a
+  backend
 </p>
-<p>
-  Usually I use it for do API's and then connect it to a front-end but I also
-  know build it with MVC with frontend and backend all in laravel
-</p>
-<p>
-  Also I have experience with laravel compliments like Sanctum, laravel Passport
-  and Telescope
-</p>
-<ul>
+
+<span class="tools-title">Tools</span>
+<ul class="tools-list">
+  <li>Laravel Passport</li>
+  <li>Sanctum</li>
+  <li>PHP 7.4</li>
+  <li>PHP 8</li>
+  <li>Eloquent</li>
+  <li>Telescope</li>
+</ul>
+<ul class="project-list">
   <li>
-    <a href="https://food-project.live/#/" target="_blank">
+    <a href="https://food-project.live/#/" target="_blank" rel="noreferrer">
       https://food-project.live - (Personal demo project)
     </a>
   </li>
+  <li>
+    <a href="https://federa.com/" target="_blank">federa.com </a>
+  </li>
+  <li>
+    <a href="https://www.ucpa.asso.fr" target="_blank">www.ucpa.asso.fr</a>
+  </li>
 </ul>
-
-<style lang="scss">
-  p {
-    margin: 0.5rem 1rem;
-    font-family: $varela;
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 1.5;
-    color: white;
-  }
-  ul {
-    list-style: outside;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  li {
-    font-family: $varela;
-    margin: 0.5rem 0;
-  }
-  a {
-    margin: 2rem 1rem;
-    color: white;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-</style>

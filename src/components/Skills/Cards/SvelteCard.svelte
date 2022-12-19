@@ -1,38 +1,28 @@
+<script>
+  import "./StyleCards.scss";
+</script>
+
 <p>
-  I learned it at March 2022 on my own, playing with the official svelte
-  tutorial and reading the documentation for it and the svelte kit.
+  I learned it on my own and I worked with it in a few projects as a freelancer
+  and on a personal projects like this website.
 </p>
-<p>
-  I like it a lot but I don't have professional experience yet so the best
-  example of a project that I can show you is this page. I did it just with
-  svelte and sass without any other Javascript framework or library.
-</p>
-<ul>
+<div class="spacer">
+  <span class="tools-title">Tools</span>
+  <ul class="tools-list">
+    <li>SvelteKit</li>
+    <li>Vite</li>
+    <li>Svelte Native</li>
+    <li>Svelte Store</li>
+    <li>Svelte Animations</li>
+    <li>Svelte Transitions</li>
+  </ul>
+</div>
+<ul class="project-list">
   <li><a href="/skills">www.mateonarvaez.com</a></li>
 </ul>
 
 <style lang="scss">
-  p {
-    margin: 0.5rem 1rem;
-    font-family: $varela;
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 1.5;
-    color: white;
-  }
-  ul {
-    list-style: outside;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  li {
-    font-family: $varela;
-    margin: 0.5rem 0;
-  }
-  a {
-    margin: 2rem 1rem;
-    color: white;
-    font-weight: lighter;
-    font-size: 16px;
+  .spacer {
+    margin: 1.5rem 0;
   }
 </style>

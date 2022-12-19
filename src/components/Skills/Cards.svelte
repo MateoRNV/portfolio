@@ -64,7 +64,7 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 65%;
-    height: 65vh;
+    height: 70vh;
 
     @media (max-width: 1025px) {
       width: 85%;
@@ -123,6 +123,7 @@
   }
   //cards style and scrollbar
   .card__main {
+    padding: 0rem 1rem;
     display: none;
     transition: all 0.7s ease-out;
     max-height: 19rem;
@@ -145,7 +146,6 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    padding: 0 1rem;
     top: 7%;
   }
   .card__icon {

@@ -1,44 +1,29 @@
 <p>
-  I learned it in Jan 2022. I started with it at personal projects and then I
-  started to have some professional projects
+  I learned it by my own and I have more than a year of professional experience
+  working as a front-end developer at Lexir Inc and as a freelancer on different
+  projects
 </p>
-<p>
-  Where I had more experience with React was at Lexir Inc where I started as a
-  freelancer and the I had the full-time position as a front-end developer
-</p>
-<p>
-  I am worked there for more than 6 months with NextJs and Typescript as a
-  javasript framework and with Tailwind as a Css Library
-</p>
+<span class="tools-title">Tools</span>
+<ul class="tools-list">
+  <li>NextJs</li>
+  <li>Typescript</li>
+  <li>Redux</li>
+  <li>React Hooks</li>
+  <li>React Context</li>
+  <li>Tailwind</li>
+  <li>React Native</li>
+</ul>
 
-<ul>
+<ul class="project-list">
   <li>
-    <a href="https://lexir.com" target="_blank">Lexir.com </a>
+    <a href="https://lexir.com" target="_blank" rel="noreferrer">Lexir.com </a>
+  </li>
+  <li>
+    <a href="https://aroundthetree.eu/" target="_blank" rel="noreferrer"
+      >We around the tree
+    </a>
   </li>
 </ul>
 
 <style lang="scss">
-  p {
-    margin: 0.5rem 1rem;
-    font-family: $varela;
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 1.5;
-    color: white;
-  }
-  ul {
-    list-style: outside;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  li {
-    font-family: $varela;
-    margin: 0.5rem 0;
-  }
-  a {
-    margin: 2rem 1rem;
-    color: white;
-    font-weight: lighter;
-    font-size: 16px;
-  }
 </style>

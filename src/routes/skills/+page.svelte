@@ -111,7 +111,7 @@
     text-align: center;
   }
   .back__buttom {
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1rem auto;
     width: 80%;
     transition: top 1s ease-out;
   }
@@ -178,17 +178,6 @@
       left: -2px;
       top: -2px;
       border-radius: 2rem;
-    }
-  }
-  @keyframes borderAnimation {
-    0% {
-      background-position: 83% 83%;
-    }
-    50% {
-      background-position: 50% 50%;
-    }
-    100% {
-      background-position: 10% 10%;
     }
   }
 </style>

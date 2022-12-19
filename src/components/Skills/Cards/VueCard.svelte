@@ -1,48 +1,39 @@
+<script>
+  import "./StyleCards.scss";
+</script>
+
 <p>
-  Probably the skill I have the most experience. I learned it at university
-  (IPL) and almost all my freelance jobs were in Vuejs.
+  I learned it at university and I have 1 year of professional experience with
+  it. I worked as a freelancer and for a consulting company.
 </p>
-<p>
-  For more than a year I worked on some professional and personal projects doing
-  from simple components to a bit more complex apps
-</p>
-<p>Here a few examples and projects that I participated</p>
-<ul>
+<span class="tools-title">Tools</span>
+<ul class="tools-list">
+  <li>Nuxt</li>
+  <li>Vue SSR</li>
+  <li>Vuetify</li>
+  <li>Vue PWA</li>
+  <li>Vue CLI</li>
+  <li>Vue Router</li>
+  <li>Vue Composition API</li>
+  <li>Vue Apollo</li>
+</ul>
+<ul class="project-list">
   <li>
-    <a href="https://food-project.live/#/" target="_blank">
+    <a href="https://food-project.live/#/" target="_blank" rel="noreferrer">
       food-project.live - (Personal demo project)
     </a>
   </li>
   <li>
-    <a href="https://federa.com/" target="_blank"> federa.com </a>
+    <a href="https://federa.com/" target="_blank" rel="noreferrer">
+      federa.com
+    </a>
   </li>
   <li>
-    <a href="https://www.ucpa.asso.fr" target="_blank">www.ucpa.asso.fr</a>
+    <a href="https://www.ucpa.asso.fr" target="_blank" rel="noreferrer"
+      >www.ucpa.asso.fr</a
+    >
   </li>
 </ul>
 
 <style lang="scss">
-  p {
-    margin: 0.5rem 1rem;
-    font-family: $varela;
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 1.5;
-    color: white;
-  }
-  ul {
-    list-style: outside;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  li {
-    font-family: $varela;
-    margin: 0.5rem 0;
-  }
-  a {
-    margin: 2rem 1rem;
-    color: white;
-    font-weight: lighter;
-    font-size: 14px;
-  }
 </style>

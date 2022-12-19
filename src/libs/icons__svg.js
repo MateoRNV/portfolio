@@ -23,7 +23,7 @@ import javascript from "../images/javascript.svg?raw";
 import vueSimple from "../images/vue.svg";
 import svelteSimple from "../images/svelte.svg";
 import reactSimple from "../images/react.svg";
-import nodeSimple from "../images/node.svg";
+import golangSimple from "../images/golang.svg";
 import laravelSimple from "../images/laravel.svg";
 
 const svgWhiteList = [
@@ -199,7 +199,7 @@ const svgSkillsCard = [
     icon: vue,
     isActive: true,
     color: "rgba(0, 138, 120, 0.1)",
-    experience: "1 years",
+    experience: "1 year",
   },
   {
     name: "svelte",
@@ -218,20 +218,20 @@ const svgSkillsCard = [
     experience: " 1 year",
   },
   {
-    name: "node",
-    svg: nodeSimple,
-    icon: node,
-    isActive: true,
-    color: "rgba(2, 49, 16, 0.35)",
-    experience: "<1 year",
-  },
-  {
     name: "laravel",
     svg: laravelSimple,
     icon: laravel,
     isActive: true,
     color: "rgba(78, 23, 13, 0.35)",
     experience: "1 year",
+  },
+  {
+    name: "golang",
+    svg: golangSimple,
+    icon: golang,
+    isActive: true,
+    color: "rgba(41, 121, 132, 0.35)",
+    experience: "<1 year",
   },
 ];
 

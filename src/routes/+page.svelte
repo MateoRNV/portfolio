@@ -1,5 +1,5 @@
 <script>
-  import Header from "../components/Header.svelte";
+  import Header from "../components/Index/Header.svelte";
   import { onMount } from "svelte";
 
   // Index Components
