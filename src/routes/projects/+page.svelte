@@ -17,7 +17,7 @@
 </script>
 
 {#if init}
-  <h1 in:typewriter={{ speed: 1 }} out:fade>Demos</h1>
+  <h1 in:typewriter={{ speed: 1 }} out:fade>Projects</h1>
 
   <main in:fade={{ duration: 2000, delay: 1000 }} out:fade>
     <p class="intro">
