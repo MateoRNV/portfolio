@@ -45,10 +45,10 @@
         <h3>Frameworks / Lenguages</h3>
         <ul class="centered-list ">
           <li>NextJs</li>
-          <li>NuxtJs</li>
-          <li>Gin</li>
+          <li>NodeJs</li>
           <li>Typescript</li>
           <li>GraphQL</li>
+          <li>PWA</li>
         </ul>
       </div>
       <div class="mini-card">

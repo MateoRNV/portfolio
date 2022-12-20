@@ -9,7 +9,7 @@
   import VueCard from "../../components/Skills/Cards/VueCard.svelte";
   import SvelteCard from "../../components/Skills/Cards/SvelteCard.svelte";
   import ReactCard from "../../components/Skills/Cards/ReactCard.svelte";
-  import NodeCard from "../../components/Skills/Cards/NodeCard.svelte";
+  import GolangCard from "../../components/Skills/Cards/GolangCard.svelte";
   import LaravelCard from "../../components/Skills/Cards/LaravelCard.svelte";
 
   const skills = icons.svgSkillsCard;
@@ -19,12 +19,14 @@
 
 <div in:fade={{ duration: 2000, delay: 1000 }} out:fade class="skills flex">
   {#each skills as { name, svg, icon, color, experience }}
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div
       class="skill"
       class:active={currentCard === name}
       on:click={() => (currentCard = name)}
       style="background-color: {color}; background-image: url({svg});"
     >
+      <!-- TODO: Change background transparency -->
       {#if currentCard == name}
         <div
           class="card__main"
@@ -37,8 +39,8 @@
             <SvelteCard />
           {:else if currentCard == "react"}
             <ReactCard />
-          {:else if currentCard == "node"}
-            <NodeCard />
+          {:else if currentCard == "golang"}
+            <GolangCard />
           {:else if currentCard == "laravel"}
             <LaravelCard />
           {/if}
@@ -64,7 +66,7 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 65%;
-    height: 70vh;
+    height: 67vh;
 
     @media (max-width: 1025px) {
       width: 85%;
@@ -104,7 +106,6 @@
     position: absolute;
     bottom: 0;
     padding: 1rem 2rem;
-
     .card__info__title {
       margin-left: 1.5rem;
       display: flex;

@@ -207,7 +207,7 @@ const svgSkillsCard = [
     icon: svelte,
     isActive: true,
     color: "rgba(88, 57, 31, 0.35)",
-    experience: "> 1 year",
+    experience: "Less than 1 year",
   },
   {
     name: "react",
@@ -231,7 +231,7 @@ const svgSkillsCard = [
     icon: golang,
     isActive: true,
     color: "rgba(41, 121, 132, 0.35)",
-    experience: "<1 year",
+    experience: "Less than 1 year",
   },
 ];
 

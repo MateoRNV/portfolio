@@ -1,3 +1,5 @@
+
+.single-card{
 p {
   margin: 0.5rem 1rem;
   font-family: $varela;
@@ -17,10 +19,12 @@ a {
   font-weight: lighter;
   font-size: 14px;
 }
-
-.tools-title {
-    margin: 0.5rem 1rem 0;
-    font-family: $varela;
+  .tools-section{
+    margin: 1.3rem 0;
+  }
+  .tools-title {
+      margin: 0.5rem 1rem 0;
+      font-family: $varela;
   }
   .tools-list {
     display: flex;
@@ -36,3 +40,5 @@ a {
     font-size: 14px;
     margin: 1rem 0 0;
   }
+  
+}
