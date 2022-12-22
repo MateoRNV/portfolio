@@ -20,53 +20,44 @@
   <h1 in:typewriter={{ speed: 1 }} out:fade>Projects</h1>
 
   <main in:fade={{ duration: 2000, delay: 1000 }} out:fade>
-    <p class="intro">
-      I have developed from simple components to a bit complex tasks. Some
-      projects I cannot share the code. So here I put some simple demos of my
-      projects and abilities
-    </p>
-
     <hr />
-
-    <section class="components">
-      <div class="text--components">
-        <h2>Simple components</h2>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <section class="frontend__section">
+      <div class="frontend__description">
+        <h2>Frontend Practices</h2>
         <p>
-          I work with any library like tailwind bootstrap, vuetify, etc. And In
-          most of the cases in order to do a custom design I do it in pure Html,
-          Css and Js.
+          Beyond the work I developed some little components and pages in order
+          to practice or test some specific pattern, skill, language or
+          frameworks. (ex. BEM, Sass, Pug, Tailwind, etc)
         </p>
-        <p>
-          I developed simple responsive components like logins, ratings,
-          banners, headers and a bit more complex components like dynamic
-          tables, components with animations and transitions, reactive data.
-        </p>
+        <div class="frontend--imgDescription">
+          <div class="image">
+            <img
+              on:click={() => {
+                goTo(
+                  "https://www.mateonarvaez.tech/Demo-Pages/interactive-rating-component-main/src/index.html"
+                );
+              }}
+              src="images\demos\rating.PNG"
+              alt="rating"
+            />
+          </div>
+          <div class="image ">
+            <img
+              on:click={() => {
+                goTo(
+                  "https://www.mateonarvaez.tech/Demo-Pages/nft-preview-card-component-main/src/index.html"
+                );
+              }}
+              class="eth"
+              src="images\demos\nft.PNG"
+              alt="eth"
+            />
+          </div>
+        </div>
       </div>
-      <div class="img__container flex">
-        <div class="image image--components">
-          <img
-            on:click={() => {
-              goTo(
-                "https://www.mateonarvaez.tech/Demo-Pages/interactive-rating-component-main/src/index.html"
-              );
-            }}
-            src="images\demos\rating.PNG"
-            alt="rating"
-          />
-        </div>
-        <div class="image image--components">
-          <img
-            on:click={() => {
-              goTo(
-                "https://www.mateonarvaez.tech/Demo-Pages/nft-preview-card-component-main/src/index.html"
-              );
-            }}
-            class="eth"
-            src="images\demos\nft.PNG"
-            alt="eth"
-          />
-        </div>
-        <div class="image image--components">
+      <div class="frontend--imgContainer">
+        <div class="image ">
           <img
             on:click={() => {
               goTo(
@@ -78,59 +69,29 @@
             alt="banner"
           />
         </div>
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="landingPages">
-      <div class="img_container">
-        <div class="image image--landing">
-          <img
-            on:click={() => {
-              goTo(
-                "https://www.mateonarvaez.tech/Demo-Pages/sunnyside-agency-landing-page-main/src/html/index.html"
-              );
-            }}
-            class="sunnyside"
-            src="images\demos\sunnyside.PNG"
-            alt="sunnyside"
-          />
+        <div class="img_container--mobile">
+          <div class="image">
+            <img
+              on:click={() => {
+                goTo(
+                  "https://www.mateonarvaez.tech/Demo-Pages/sunnyside-agency-landing-page-main/src/html/index.html"
+                );
+              }}
+              class="sunnyside"
+              src="images\demos\sunnyside.PNG"
+              alt="sunnyside"
+            />
+          </div>
         </div>
       </div>
-      <div class="landing__text">
-        <h2>Landing pages</h2>
-        <p>As a freelancer I made some landing pages based on given designs.</p>
-        <p>
-          Usually I develop them in Sass, but depending on the complexity I can
-          just do it in Html/Css or use some extra library or framework.
-        </p>
-      </div>
     </section>
 
     <hr />
 
-    <section class="projects">
-      <div>
-        <h2>Complete projects</h2>
-        <p>
-          I have been part of projects that have both, backend and frontend.
-        </p>
-        <p>
-          In backend creating endpoints, handling data to store in a database,
-          creating CRUDS, etc.
-        </p>
-        <p>
-          In frontend receiving that data and showing it in a friendly way,
-          making calls to the backend and making it reactive and responsive.
-        </p>
-        <p>
-          Here a demo project that have a laravel backend and a Vue frontend. It
-          has simples Crud's and another features that explains in the app
-        </p>
-      </div>
-      <div class="img_container">
+    <section class="personalProjects">
+      <div class="img_container--mobile">
         <div class="image image--projects">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
           <img
             on:click={() => {
               goTo("https://food-project.live/#/");
@@ -141,11 +102,80 @@
           />
         </div>
       </div>
+      <div class="personalProjects__description">
+        <h2>Personal Projects</h2>
+        <p>
+          I have been developing personal projects in order to practice and
+          improve my skills trying to approach every aspect of the development
+          process.
+        </p>
+        <p class="more--soon">• More soon •</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="professionalProjects">
+      <div class="professionalP__description">
+        <h2>Professional Projects</h2>
+        <p>
+          I have worked with some development teams working on commercial
+          products or services. I have been involved in the development of the
+          frontend and backend of the projects.
+        </p>
+        <p>
+          I like to have a good communication with the team and I can work with
+          agile methodologies like SCRUM or KAMBAM. I have experience with tools
+          like JIRA, TRELLO, GIT, Notion etc.
+        </p>
+        <div class="image lexir">
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <img
+            on:click={() => {
+              goTo("https://www.lexir.com/");
+            }}
+            src="images\demos\lexir.PNG"
+            alt="lexir landing page"
+            class="federa"
+          />
+        </div>
+      </div>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <div class="professional__imageContainer">
+        <div class="image">
+          <img
+            on:click={() => {
+              goTo("https://smartlistings.federa.com/v2/");
+            }}
+            src="images\demos\federa.PNG"
+            alt="federa smart listings"
+            class="federa"
+          />
+        </div>
+
+        <div class="image">
+          <img
+            on:click={() => {
+              goTo("https://aroundthetree.eu/pt/home/");
+            }}
+            src="images\demos\wearoundthetree.PNG"
+            alt="lexir landing page"
+            class="wearoundthetree"
+          />
+        </div>
+      </div>
     </section>
   </main>
 {/if}
 
 <style lang="scss">
+  main {
+    margin: 0 auto;
+    width: 90%;
+  }
+  section {
+    display: flex;
+  }
   h1 {
     margin-top: 3rem;
     text-align: center;
@@ -153,169 +183,199 @@
     font-size: 30px;
     font-weight: lighter;
   }
-  main {
-    margin: 0 auto;
-    width: 90%;
-    .intro {
-      // margin: 0 10rem;
-      margin: auto;
-      text-align: center;
-      width: 50%;
-      margin-bottom: 2rem;
-      font-size: 18px;
-      font-family: $mukta;
-      font-weight: lighter;
-    }
+  div {
+    width: 50%;
   }
-  // Main and all sections
-  section {
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 30px;
+    font-family: $mukta;
+    font-weight: bold;
+  }
+  p {
+    margin: 1rem 0;
+  }
+  // sections
+  .frontend__section {
+    margin: 3rem 0 4rem;
+  }
+  .frontend--imgDescription {
+    width: 100%;
     display: flex;
-    div {
-      width: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .frontend--imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem 2rem;
+  }
+  .frontend__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      filter: grayscale(100%);
+      width: 15rem;
+      transition: all 0.5s ease-out;
     }
-    h2 {
-      margin-bottom: 3rem;
-      font-size: 30px;
-      font-family: $mukta;
-      font-weight: bold;
+    .eth {
+      width: 10rem;
+      border-radius: 20px;
     }
-    p {
-      margin: 1rem 0;
+    .banner {
+      width: 25rem;
     }
-    .img__container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0;
+    .sunnyside {
+      width: 18rem;
+      border-radius: 20px;
     }
-    .image {
-      display: flex;
-      width: 40%;
-      padding: 1rem;
-      img {
-        filter: grayscale(100%);
-        width: 15rem;
-        transition: all 0.5s ease-out;
-      }
-      .eth {
-        width: 12rem;
-        border-radius: 20px;
-      }
-      .banner {
-        width: 25rem;
-      }
-      .sunnyside {
-        width: 25rem;
-        border-radius: 20px;
-      }
-      .foodProject {
-        margin-top: 3rem;
-        margin-left: 5rem;
-        width: 25rem;
-        border-radius: 20px;
-      }
-      img:hover {
-        filter: grayscale(0%);
-        scale: 1.2;
-        cursor: pointer;
-      }
+    .foodProject {
+      width: 25rem;
+      border-radius: 20px;
+      margin: 4rem 0;
     }
-    .image--components {
-      justify-content: center;
+    .federa {
+      width: 20rem;
+      border-radius: 20px;
+      margin-left: 8rem;
     }
-    .image--landing {
-      margin-left: 2rem;
+    .wearoundthetree {
+      width: 20rem;
+      height: 12rem;
+      border-radius: 20px;
     }
-    .image--projects {
-      justify-content: center;
-      margin: auto;
-    }
-    .text--components {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 1rem;
-      margin-right: 4rem;
+    img:hover {
+      filter: grayscale(0%);
+      scale: 1.2;
+      cursor: pointer;
     }
   }
-  .components {
-    margin: 3rem 0;
+
+  .image--projects {
+    justify-content: center;
+    margin: auto;
   }
-  .landingPages {
-    margin: 7rem 0;
-    .landing__text {
-      width: 50%;
-      text-align: center;
-    }
-  }
-  .projects {
-    margin: 5rem 3rem;
+
+  .personalProjects {
+    margin: 6rem 0rem;
+    padding-right: 0rem;
+
     h2 {
       margin-top: 0rem;
     }
   }
+  .personalProjects__description {
+    margin: 0rem 5rem;
+  }
+  .img_container--mobile {
+    display: flex;
+    justify-content: center;
+  }
 
+  .personalProjects {
+    margin: 5rem 0;
+    padding: 0;
+  }
+  .more--soon {
+    margin: 8rem 0 0rem 0;
+    font-size: 14px;
+  }
+
+  .professionalProjects {
+    display: flex;
+    margin: 3rem 3rem;
+  }
+
+  .professional__imageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    justify-items: center;
+  }
+
+  .lexir {
+    margin: 3.5rem 0;
+    margin-left: 7rem;
+    float: center;
+  }
   @media (max-width: 1000px) {
-    main {
-      .intro {
-        width: 100%;
-      }
-    }
     section {
       flex-direction: column;
       align-items: center;
       text-align: center;
       font-size: 16px;
       font-weight: lighter;
-
+      h2 {
+        margin-bottom: 1rem;
+      }
       div {
         width: 80%;
       }
-      .text--components {
-        margin: 0;
-        width: 90%;
-      }
-      h2 {
-        margin-bottom: 2rem;
-      }
-      .img__container {
-        gap: 2rem;
-      }
-      .img_container {
-        order: 2;
-        margin: 0;
 
-        .image--landing {
-          display: flex;
-          justify-content: center;
-          width: auto;
-          margin: auto;
-          @media (max-width: 500px) {
-            img {
-              scale: 0.8;
-            }
-          }
+      .image .federa {
+        margin-left: 0;
+      }
+      .lexir {
+        margin: 3rem auto 2rem;
+      }
+    }
+    .frontend__section {
+      margin: 0;
+    }
+
+    .frontend__description {
+      padding: 0;
+      margin: 0;
+      width: 90%;
+    }
+
+    .frontend--imgDescription {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .img_container--mobile {
+      order: 2;
+      @media (max-width: 500px) {
+        img {
+          scale: 0.8;
         }
-        .foodProject {
-          margin-left: 0;
-          @media (max-width: 500px) {
-            scale: 0.8;
-          }
+      }
+      .foodProject {
+        margin: 0;
+        @media (max-width: 500px) {
+          scale: 0.8;
         }
       }
     }
-    .components {
-      margin: 0;
+    .more--soon {
+      margin: 2rem 0 1rem 0;
+      font-size: 14px;
     }
-    .landingPages {
-      margin: 0;
-      .landing__text {
-        width: 100%;
-      }
+    .personalProjects {
+      margin: 1rem 0;
     }
-    .projects {
-      margin: 2rem 0;
+    .professionalProjects {
+      margin: 1rem 1rem;
+    }
+    .professional__imageContainer {
+      gap: 2rem;
     }
   }
 </style>

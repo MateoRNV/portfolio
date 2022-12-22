@@ -33,7 +33,7 @@
         href="/projects"
         on:click={() => {
           open = false;
-        }}><li>Demos</li></a
+        }}><li>Projects</li></a
       >
       <!-- <a
         href="/experience"
