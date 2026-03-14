@@ -2,7 +2,26 @@ const revealElements = document.querySelectorAll(".reveal");
 const spotlight = document.querySelector(".spotlight");
 const avatarStage = document.querySelector(".avatar-stage");
 const avatarCard = document.querySelector(".avatar-card");
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Hamburger menu
+if (hamburger && nav) {
+  hamburger.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    hamburger.classList.toggle("is-active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      hamburger.classList.remove("is-active");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
 if (!reduceMotion) {
   const observer = new IntersectionObserver(
